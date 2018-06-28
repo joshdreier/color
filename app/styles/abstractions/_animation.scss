@@ -7,6 +7,19 @@
 
 // KEYFRAMES
 
+@keyframes pop-in {
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes pop-out {
+  to {
+    visibility: hidden;
+  }
+}
+
+
 // Opacity Fade In
 @keyframes fade-in {
   from {

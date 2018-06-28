@@ -17,7 +17,22 @@ body.home {
   width: 1366px;
   height: 827px;
 
+  .logo {
+    display: block;
+    opacity: 0;
+    width: 256px;
+    height: 256px;
+    margin: 32px;
+    background: url('../images/logo.svg');
+    @include background-cover;
+    @include hide-text;
+    animation: fade-in 1820ms;
+    animation-delay: calc(76 * #{$interval});
+    animation-fill-mode: forwards;
+  }
+
   .frame {
+    visibility: hidden;
     position: absolute;
     width: 320px;
     height: 320px;
@@ -28,18 +43,21 @@ body.home {
     top: 458px;
     left: 248px;
     background: $torch-red;
+    @include dot(24, 162);
   }
 
   .frame2 {
     top: 119px;
     left: 1201px;
     background: $shakespeare;
+    @include dot(36, 145);
   }
 
   .frame3 {
     top: 258px;
     left: -50px;
     background: $can-can;
+    @include dot(43, 148);
   }
 
   .frame4 {
@@ -47,6 +65,7 @@ body.home {
     left: 780px;
     background: $arsenic;
     z-index: 2;
+    @include dot(46, 160);
   }
 
   .frame5 {
@@ -54,6 +73,7 @@ body.home {
     left: 1019px;
     background: $hot-magenta;
     z-index: 2;
+    @include dot(49, 154);
   }
 
   .frame6 {
@@ -61,6 +81,7 @@ body.home {
     left: 195px;
     background: $eden;
     z-index: 2;
+    @include dot(52, 152);
   }
 
   .frame7 {
@@ -68,48 +89,60 @@ body.home {
     left: 441px;
     background: $downy;
     z-index: 2;
+    @include dot(55, 156);
   }
 
   .frame8 {
     top: 592px;
     left: 1092px;
     background: $golden-yellow;
+    @include dot(58, 139);
   }
 
   .frame9 {
     top: 626px;
     left: -45px;
     background: $golden-bell;
+    @include dot(61, 133);
   }
 
   .frame10 {
     top: -108px;
     left: 33px;
     background: $deep-sky-blue;
+    @include dot(64, 142);
   }
 
   .frame11 {
     top: -88px;
     left: 459px;
     background: $chartreuse-yellow;
+    @include dot(67, 161);
   }
 
   .frame12 {
     top: 482px;
     left: 761px;
     background: $flame-pea;
+    @include dot(70, 158);
   }
 
   .frame13 {
     top: -108px;
     left: 964px;
     background: $pumpkin;
+    @include dot(73, 136);
   }
 
   .frame14 {
     top: 251px;
     left: 519px;
     background: $green-white;
+    animation: pop-in;
+    animation-delay: calc(76 * #{$interval});
+    animation-fill-mode: forwards;
   }
+
+
 
 }//#dots-animation

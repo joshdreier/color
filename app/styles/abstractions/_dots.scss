@@ -1,0 +1,8 @@
+$interval: 40ms;
+
+@mixin dot($in, $out) {
+  animation: pop-in 1ms calc(#{$in} * #{$interval}), pop-out 1ms calc(#{$out} * #{$interval});
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
