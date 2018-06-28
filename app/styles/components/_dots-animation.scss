@@ -1,8 +1,3 @@
-body.home {
-  background: url('../images/cityscape.jpg');
-  @include background-cover;
-}
-
 #dots-animation-container {
   position: relative;
   width: 100vw;
@@ -43,14 +38,14 @@ body.home {
     top: 458px;
     left: 248px;
     background: $torch-red;
-    @include dot(24, 162);
+    @include dot(16, 162);
   }
 
   .frame2 {
     top: 119px;
     left: 1201px;
     background: $shakespeare;
-    @include dot(36, 145);
+    @include dot(28, 145);
   }
 
   .frame3 {
@@ -142,7 +137,5 @@ body.home {
     animation-delay: calc(76 * #{$interval});
     animation-fill-mode: forwards;
   }
-
-
 
 }//#dots-animation

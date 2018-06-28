@@ -1,0 +1,4 @@
+body.home {
+  background: url('../images/cityscape.jpg');
+  @include background-cover;
+}

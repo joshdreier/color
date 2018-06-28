@@ -6,3 +6,7 @@ $interval: 40ms;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
+
+@mixin stripe-in($delay) {
+  animation-delay: calc(#{$delay} * #{$interval});
+}

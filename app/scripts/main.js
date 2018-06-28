@@ -1,8 +1,8 @@
 // Namespace
-var KPM = KPM || {};
+var CF = CF || {};
 
 // Mobile Main Menu (hamburger)
-KPM.mobileMainMenu = (function ($) {
+CF.mobileMainMenu = (function ($) {
 
   function init(){
 
@@ -31,118 +31,36 @@ KPM.mobileMainMenu = (function ($) {
 })(jQuery);
 
 
-// Comments Box
-KPM.commentsBox = (function ($) {
-
-    function init(){
-
-      var $commentsContainer = $('.comments-container');
-
-      // load exernal data
-      $.getScript('scripts/comments.js', function() {
-        $.each( comments, function( i, val ) {
-
-          // convert unix timestamp
-          var date = new Date(this.timestamp * 1000);
-          var formattedDate =  (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
-
-          // add content to DOM
-          $commentsContainer.append('<li class="slide"><blockquote><p class="comment"><span>' + this.comment + '</span></p><p class="author">' + this.name + ', ' + formattedDate + '</p></blockquote></li>');
-        });
-      });
-
-    }
-
-    if($('.comment-box').length) {
-      init();
-    }
-
-  })(jQuery);
-
-
-// Carousel
-KPM.carousel = (function ($) {
+//
+CF.stripeAnimation = (function ($) {
 
   function init(){
 
-    var $carousel = $('.carousel-container');
+    var stripeHeight = 59;
+    var $browserHeight = $(window).height();
+    var stripesToFit = Math.ceil($browserHeight / stripeHeight);
 
-    $carousel.each(function() {
+    var $stripeContainer = $('#stripes-animation-container')
+    var $stripeList = $('#stripes-animation')
 
-      var $carousel = $(this);
-      var $nextBtn = $carousel.find('.next');
-      var $prevBtn = $carousel.find('.prev');
-      var $firstSlide = $carousel.find('.slide:first-child');
-      var $lastSlide = $carousel.find('.slide:last-child');
+    // loop to add stripes
+    var i;
+    var interval = 40;
+    var delay = 7800;
 
-      // make first slide active
-      $firstSlide.addClass('active');
+    for (i = 0; i < stripesToFit; i++) {
+      delay -= 50;
+      $stripeList.append('<li class="stripe stripe' + i + '" style="animation-delay: ' + delay + 'ms;"></li> ');
+    }
 
-      // autoPlay slides
-      var delay = 7000;
-      var j = 0;
-      function autoPlay () {
-        goForward();
-        j++;
-        setTimeout(autoPlay, delay); // callback
-      }
-      setTimeout(autoPlay, delay);
+    // add delay to fill in background in case user resizes window
+    setTimeout(function(){ $stripeContainer.addClass('delay') }, delay + 2000);
 
-      function goForward() {
-        // if there is a next slide, advance
-        if( $carousel.find('.active').next().is('li') ) {
-          $carousel.find('.active').removeClass('active').next('li').addClass('active');
-        }
-        else {
-          // if there is not a next slide, start from the beginning
-          $carousel.find('.active').removeClass('active');
-          $firstSlide.addClass('active');
-        }
-      }
-
-      function goBack() {
-        // if there is a prev slide, advance
-        if( $carousel.find('.active').prev().is('li') ) {
-          $carousel.find('.active').removeClass('active').prev('li').addClass('active');
-        }
-        else {
-          // if there is not a next slide, start from the beginning
-          $carousel.find('.active').removeClass('active');
-          $lastSlide.addClass('active');
-        }
-      }
-
-      // Swipe
-      $carousel.swipe( {
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-          if (direction === 'left') {
-            goForward();
-          }
-          else if (direction === 'right') {
-            goBack();
-          }
-        }
-      });
-
-      // Next button
-      $nextBtn.on('click', function(e) {
-        e.preventDefault();
-        goForward();
-      });
-
-      // Previous button
-      $prevBtn.on('click', function(e) {
-        e.preventDefault();
-        goBack();
-      });
-
-    });
 
   }
 
-  if($('.carousel-container').length) {
-    // delay for content loaded into dom after inital page load
-    setTimeout(init, 500);
+  if($('#stripes-animation').length) {
+    init();
   }
 
 })(jQuery);

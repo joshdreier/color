@@ -1,0 +1,91 @@
+#stripes-animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  overflow: hidden;
+
+  &.delay {
+    background: url('../images/stripe-bg.png');
+  }
+
+}//#stripes-animation-container
+
+#stripes-animation {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    height: 59px;
+    width: 100%;
+    animation: pop-in 1ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    &:nth-child(14n + 1) {
+      background-color: $torch-red;
+    }
+
+    &:nth-child(14n + 2) {
+      background-color: $can-can;
+    }
+
+    &:nth-child(14n + 3) {
+      background-color: $eden;
+    }
+
+    &:nth-child(14n + 4) {
+      background-color: $deep-sky-blue;
+    }
+
+    &:nth-child(14n + 5) {
+      background-color: $golden-yellow;
+    }
+
+    &:nth-child(14n + 6) {
+      background-color: $pumpkin;
+    }
+
+    &:nth-child(14n + 7) {
+      background-color: $hot-magenta;
+    }
+
+    &:nth-child(14n + 8) {
+      background-color: $downy;
+    }
+
+    &:nth-child(14n + 9) {
+      background-color: $golden-bell;
+    }
+
+    &:nth-child(14n + 10) {
+      background-color: $chartreuse-yellow;
+    }
+
+    &:nth-child(14n + 11) {
+      background-color: $flame-pea;
+    }
+
+    &:nth-child(14n + 12) {
+      background-color: $shakespeare;
+    }
+
+    &:nth-child(14n + 13) {
+      background-color: $arsenic;
+    }
+
+    &:nth-child(14n + 14) {
+      background-color: $green-white;
+    }
+
+  }
+
+}//#stripes-animation
