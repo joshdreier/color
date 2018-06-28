@@ -1,0 +1,23 @@
+/**
+ * Hide an element, whilst making its content available to screen readers
+ * and meeting WCAG AA guidelines
+ */
+@mixin visually-hidden() {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.visually-hidden {
+  @include visually-hidden();
+}
+
+// Hide text, not offscreen
+@mixin hide-text {
+  text-indent: -9999px;
+}
+

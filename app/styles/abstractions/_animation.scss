@@ -1,0 +1,31 @@
+/**
+* Hide Text
+*/
+@mixin fade-in() {
+  animation: fade-in $base-duration $base-timing;
+}
+
+// KEYFRAMES
+
+// Opacity Fade In
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Mobile SubMenu Slide Down
+@keyframes sub-menu-down {
+  from {
+    opacity: 0;
+    top: -60px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+

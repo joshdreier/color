@@ -1,0 +1,19 @@
+/**
+* Media Query mixin
+*
+* Usage:
+* .selector {
+*     property: value;
+*
+*     @include mq($bp-tablet) {
+*         property: value;
+*     }
+* }
+*/
+
+@mixin mq($mq) {
+  @media #{$mq} {
+	 @content;
+	}
+}
+

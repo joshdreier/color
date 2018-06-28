@@ -1,0 +1,115 @@
+body.home {
+  background: url('../images/cityscape.jpg');
+  @include background-cover;
+}
+
+#dots-animation-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dots-animation {
+  position: absolute;
+  width: 1366px;
+  height: 827px;
+
+  .frame {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+  }
+
+  .frame1 {
+    top: 458px;
+    left: 248px;
+    background: $torch-red;
+  }
+
+  .frame2 {
+    top: 119px;
+    left: 1201px;
+    background: $shakespeare;
+  }
+
+  .frame3 {
+    top: 258px;
+    left: -50px;
+    background: $can-can;
+  }
+
+  .frame4 {
+    top: 39px;
+    left: 780px;
+    background: $arsenic;
+    z-index: 2;
+  }
+
+  .frame5 {
+    top: 270px;
+    left: 1019px;
+    background: $hot-magenta;
+    z-index: 2;
+  }
+
+  .frame6 {
+    top: 119px;
+    left: 195px;
+    background: $eden;
+    z-index: 2;
+  }
+
+  .frame7 {
+    top: 586px;
+    left: 441px;
+    background: $downy;
+    z-index: 2;
+  }
+
+  .frame8 {
+    top: 592px;
+    left: 1092px;
+    background: $golden-yellow;
+  }
+
+  .frame9 {
+    top: 626px;
+    left: -45px;
+    background: $golden-bell;
+  }
+
+  .frame10 {
+    top: -108px;
+    left: 33px;
+    background: $deep-sky-blue;
+  }
+
+  .frame11 {
+    top: -88px;
+    left: 459px;
+    background: $chartreuse-yellow;
+  }
+
+  .frame12 {
+    top: 482px;
+    left: 761px;
+    background: $flame-pea;
+  }
+
+  .frame13 {
+    top: -108px;
+    left: 964px;
+    background: $pumpkin;
+  }
+
+  .frame14 {
+    top: 251px;
+    left: 519px;
+    background: $green-white;
+  }
+
+}//#dots-animation

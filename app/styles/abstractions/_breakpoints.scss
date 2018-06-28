@@ -1,0 +1,7 @@
+/**
+ * Breakpoints for Media Queries
+ */
+$bp-mobile: 				'screen and (max-width: $mobile-max)';
+$bp-tablet: 				'screen and (min-width: $tablet-min)';
+$bp-tablet-only:    'screen and (min-width: $tablet-min) and (max-width: $tablet-max)';
+$bp-desktop: 				'screen and (min-width: $desktop-min)';

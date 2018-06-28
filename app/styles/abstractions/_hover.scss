@@ -1,0 +1,7 @@
+@mixin hover-state {
+  &:focus,
+  &:active,
+  &:hover {
+    @content;
+  }
+}

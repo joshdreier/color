@@ -1,0 +1,23 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+}
+
+h1 {
+  @include font-size(30, 40);
+  margin-bottom: 10px;
+}
+
+h2 {
+  @include font-size(24, 34);
+  margin-bottom: 10px;
+}
+
+p {
+  @include font-size(14, 20);
+
+  @include mq($bp-tablet) {
+    @include font-size(16, 24);
+  }
+
+}

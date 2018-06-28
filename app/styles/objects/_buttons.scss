@@ -1,0 +1,16 @@
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: $white;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  transition: $base-duration $base-timing;
+
+  @include hover-state {
+    background: $white;
+    color: $black;
+  }
+
+}
