@@ -5,8 +5,13 @@ body {
 }
 
 h1 {
-  @include font-size(30, 40);
-  margin-bottom: 10px;
+  @extend %stripe;
+  padding-left: $gutter-desktop;
+
+  .tickets & {
+    margin-top: 177px;
+  }
+
 }
 
 h2 {
@@ -21,4 +26,14 @@ p {
     @include font-size(16, 24);
   }
 
+}
+
+%stripe {
+  display: block;
+  white-space: nowrap;
+  line-height: 59px;
+  color: $black;
+  font-family: 'Poppins';
+  font-size: 32px;
+  text-decoration: none;
 }

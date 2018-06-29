@@ -1,6 +1,9 @@
 // Namespace
 var CF = CF || {};
 
+// globals
+var stripeHeight = 59;
+
 // Mobile Main Menu (hamburger)
 CF.mobileMainMenu = (function ($) {
 
@@ -36,7 +39,6 @@ CF.stripeAnimation = (function ($) {
 
   function init(){
 
-    var stripeHeight = 59;
     var $browserHeight = $(window).height();
     var stripesToFit = Math.ceil($browserHeight / stripeHeight);
 
@@ -64,3 +66,8 @@ CF.stripeAnimation = (function ($) {
   }
 
 })(jQuery);
+
+
+
+
+

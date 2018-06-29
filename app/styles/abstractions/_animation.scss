@@ -1,8 +1,16 @@
 /**
-* Hide Text
+* Fade In
 */
 @mixin fade-in() {
   animation: fade-in $base-duration $base-timing;
+}
+
+/** Reveal
+*/
+@mixin reveal() {
+  animation: reveal 1s $base-timing;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
 // KEYFRAMES
@@ -28,6 +36,12 @@
   to {
     opacity: 1;
   }
+}
+
+// Reveal
+@keyframes reveal {
+  from {max-height:   0px; }
+  to {max-height: 1000px; }
 }
 
 // Mobile SubMenu Slide Down

@@ -1,0 +1,26 @@
+.nav {
+  position: relative;
+  width: 100%;
+
+  &:first-of-type:not(.tickets) {
+    margin-top: 177px;
+  }
+
+  ul {
+
+    > li {
+      padding-left: $gutter-desktop;
+
+      > a {
+        @extend %stripe;
+      }
+    }
+  }
+}// #nav
+
+ul.empty-stripes {
+  > li {
+    height: 59px;
+    width: 100%;
+  }
+}

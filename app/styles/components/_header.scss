@@ -1,0 +1,16 @@
+#header {
+
+  .logo {
+    position: absolute;
+    z-index: 5;
+    display: block;
+    top: 30px;
+    left: $gutter-desktop;
+    width: 126px;
+    height: 126px;
+    background: url('../images/logo.svg');
+    @include background-cover;
+    @include hide-text;
+  }
+
+}//header

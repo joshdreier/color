@@ -1,3 +1,10 @@
+@mixin home-fade() {
+  opacity: 0;
+  animation: fade-in 820ms;
+  animation-delay: calc(180 * #{$interval});
+  animation-fill-mode: forwards;
+}
+
 body.home {
   background: url('../images/cityscape.jpg');
   @include background-cover;
@@ -8,81 +15,34 @@ body.home {
     background-size: auto;
     background-position: left top;
   }
-}
 
-#header {
+  #header {
 
-  .logo {
-    opacity: 0;
+    .logo {
+      @include home-fade();
+    }
+
+  }//header
+
+  .nav {
     position: absolute;
-    z-index: 5;
-    display: block;
-    top: 30px;
-    left: $gutter-desktop;
-    width: 126px;
-    height: 126px;
-    background: url('../images/logo.svg');
-    @include background-cover;
-    @include hide-text;
-    animation: fade-in 820ms;
-    animation-delay: calc(180 * #{$interval});
-    animation-fill-mode: forwards;
-  }
+    z-index: 10;
+    top: 0;
+    margin: 0;
+    @include home-fade();
+  }// #nav
 
-}//header
+  #footer {
+    position: absolute;
+    z-index: 10;
+    top: 767px;
+    @include home-fade();
+  }// #footer
 
-#nav {
-  opacity: 0;
-  position: absolute;
-  z-index: 10;
-  top: 177px;
-  left: $gutter-desktop;
-  animation: fade-in 820ms;
-  animation-delay: calc(180 * #{$interval});
-  animation-fill-mode: forwards;
 
-  ul {
-
-    > li {
-      > a {
-        display: block;
-        white-space: nowrap;
-        line-height: 59px;
-        color: $black;
-        font-family: 'Poppins';
-        font-size: 32px;
-        text-decoration: none;
-      }
-    }
-  }
 }
 
 
-#footer {
-  //display: none;
-  opacity: 0;
-  position: absolute;
-  z-index: 10;
-  top: 767px;
-  left: $gutter-desktop;
-  animation: fade-in 820ms;
-  animation-delay: calc(180 * #{$interval});
-  animation-fill-mode: forwards;
-  font-family: 'Poppins';
-  color: $black;
-  font-size: 12px;
-  line-height: 59px;
 
-  a {
-    display: inline-block;
-    color: $black;
-    text-decoration: none;
 
-    &::before {
-      content: '|';
-      padding: 0 8px 0 5px;
-    }
 
-  }
-
-}// #footer
