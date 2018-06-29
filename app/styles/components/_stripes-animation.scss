@@ -4,14 +4,9 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 10;
+  z-index: 3;
   width: 100%;
   overflow: hidden;
-
-  &.delay {
-    background: url('../images/stripe-bg.png');
-  }
-
 }//#stripes-animation-container
 
 #stripes-animation {

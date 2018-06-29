@@ -46,7 +46,7 @@ CF.stripeAnimation = (function ($) {
     // loop to add stripes
     var i;
     var interval = 40;
-    var delay = 7800;
+    var delay = 7400;
 
     for (i = 0; i < stripesToFit; i++) {
       delay -= 50;
@@ -54,7 +54,7 @@ CF.stripeAnimation = (function ($) {
     }
 
     // add delay to fill in background in case user resizes window
-    setTimeout(function(){ $stripeContainer.addClass('delay') }, delay + 2000);
+    setTimeout(function(){ $('body').addClass('delay') }, delay + 1000);
 
 
   }
