@@ -18,6 +18,14 @@ body {
  background-position: left top;
 }//body
 
+*:focus {
+  outline: 0;
+}
+
+main {
+  position: relative;
+}
+
 .layout-container {
   position: relative;
   left: 0;
@@ -37,14 +45,32 @@ body {
 }//.layout-container
 
 section {
-  max-height: 0;
+  position: relative;
   overflow: hidden;
   width: 100%;
-  @include reveal;
 
-  > .container {
+  .section-container {
+    display: none;
     max-width: $layout-max-width;
-    margin: 0 auto;
   }
 
 }//section
+
+
+.section-toggle {
+  display: none;
+  @include remove-button-styles;
+  background: url(../images/x.svg);
+  @include hide-text;
+  @include background-cover;
+  background-size: 19px 19px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 52px;
+
+  &.active {
+    display: block;
+  }
+}

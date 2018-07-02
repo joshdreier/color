@@ -1,0 +1,45 @@
+.tickets-section {
+  margin-top: 177px;
+}
+
+.tickets-container {
+  display: flex;
+  padding: 0 0 30px 190px;
+  height: 236px;
+
+  .button-container {
+
+    a {
+      display: block;
+      background-image: url(../images/buytickets_button_outlinedfont.svg);
+      @include background-cover;
+      @include hide-text;
+      width: 130px;
+      height: 130px;
+
+      @include hover {
+        background-image: url(../images/buytickets_button_over_outlinedfont.svg);
+      }
+
+      &:active {
+        background-image: url(../images/buytickets_button_on_outlinedfont.svg);
+      }
+
+    }
+
+  }
+
+  .text-container {
+    margin-left: 22px;
+
+    h2 {
+      @include font(14, 22);
+
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+
+
+}//.tickets-container

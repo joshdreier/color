@@ -58,7 +58,6 @@ CF.stripeAnimation = (function ($) {
     // add delay to fill in background in case user resizes window
     setTimeout(function(){ $('body').addClass('delay') }, delay + 1000);
 
-
   }
 
   if($('#stripes-animation').length) {
@@ -68,6 +67,60 @@ CF.stripeAnimation = (function ($) {
 })(jQuery);
 
 
+// Mobile Main Menu (hamburger)
+CF.sectionToggle = (function ($) {
+
+  function init(){
+
+    var $sectionContainer = $('.section-container');
+    var $sectionTitle = $('.section-title');
+    var $sectionToggle = $('.section-toggle');
+    var slideSpeed = 400;
+
+    // init by opening
+    $sectionContainer.slideDown(slideSpeed).addClass('active');
+    $sectionToggle.addClass('active').attr('aria-expanded', 'true');
+    $sectionTitle.addClass('active').attr('aria-expanded', 'true');
+
+    $sectionToggle.on('click', function(e) {
+      e.preventDefault();
+
+      if (!$(this).is('.active')) {
+        $(this).addClass('active').attr('aria-expanded', 'true');
+        $(this).siblings('.section-container').slideDown(slideSpeed).addClass('active');
+        $(this).siblings('.section-title').addClass('active').attr('aria-expanded', 'true');
+      }
+      else {
+        $(this).removeClass('active').attr('aria-expanded', 'false');
+        $(this).siblings('.section-container').slideUp(slideSpeed).removeClass('active');
+        $(this).siblings('.section-title').removeClass('active').attr('aria-expanded', 'false');
+      }
+
+    });
+
+    $sectionTitle.on('click', function(e) {
+      e.preventDefault();
+
+      if (!$(this).is('.active')) {
+        $(this).addClass('active').attr('aria-expanded', 'true');
+        $(this).siblings('.section-container').slideDown(slideSpeed).addClass('active');
+        $(this).siblings('.section-toggle').addClass('active').attr('aria-expanded', 'true');
+      }
+      else {
+        $(this).removeClass('active').attr('aria-expanded', 'false');
+        $(this).siblings('.section-container').slideUp(slideSpeed).removeClass('active');
+        $(this).siblings('.section-toggle').removeClass('active').attr('aria-expanded', 'false');
+      }
+
+    });
+
+  }
+
+  if($('.section-toggle').length) {
+    init();
+  }
+
+})(jQuery);
 
 
 

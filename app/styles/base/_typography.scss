@@ -1,29 +1,49 @@
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 100%;
+  font-family: 'Poppins', sans-serif;
+  font: 100%;
   overflow: hidden;
+  font-weight: 600;
 }
 
 h1 {
   @extend %stripe;
-  padding-left: $gutter-desktop;
+  @include hide-text;
+  height: $stripe-height;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: $gutter-desktop 0;
 
-  .tickets & {
-    margin-top: 177px;
+  @include mq($bp-mobile) {
+    height: $stripe-height-mobile;
+    background-position: $gutter-mobile 0;
+  }
+
+  &.tickets {
+    background-image: url(../images/tickets.svg);
+
+    &:hover,
+    &.active {
+      background-image: url(../images/tickets_over.svg);
+    }
+
   }
 
 }
 
 h2 {
-  @include font-size(24, 34);
+  @include font(24, 34);
   margin-bottom: 10px;
 }
 
 p {
-  @include font-size(14, 20);
+  @include font(14, 22);
 
   @include mq($bp-tablet) {
-    @include font-size(16, 24);
+    @include font(16, 24);
+  }
+
+  span {
+    font-weight: 400;
   }
 
 }
@@ -34,6 +54,6 @@ p {
   line-height: 59px;
   color: $black;
   font-family: 'Poppins';
-  font-size: 32px;
+  font: 32px;
   text-decoration: none;
 }

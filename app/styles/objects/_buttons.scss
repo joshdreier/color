@@ -8,7 +8,7 @@
   text-decoration: none;
   transition: $base-duration $base-timing;
 
-  @include hover-state {
+  @include hover {
     background: $white;
     color: $black;
   }

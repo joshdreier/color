@@ -8,7 +8,7 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500, 600,700" rel="stylesheet">
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -25,36 +25,59 @@
 
     <main>
 
-      <h1 class="deep-sky-blue">Tickets</h1>
 
-      <section class="deep-sky-blue">
+      <section class="tickets-section deep-sky-blue">
 
-        <div class="container" style="width: 500px;">
-        Ryan White and HIV Testing Day
-        June 1, 2018
-        The proportion of HIV-infected individuals who know their serostatus has increased in recent years, demonstrating progress toward the goal of expanded testing to reduce further transmission and... more
+        <h1 class="section-title tickets" role="button">Tickets</h1>
+        <button class="section-toggle">Close Section</button>
 
-        Increasing Hepatitis C Testing, Treatment, and Cure in People Living with HIVThe Health Resources and Services Administration’s (HRSA) Ryan White HIV/AIDS Program (RWHAP) has had a long-standing... more
+        <div class="section-container">
+
+          <div class="tickets-container">
+            <div class="button-container">
+              <a href="#" target="_blank">Buy Tickets</a>
+            </div>
+
+            <div class="text-container">
+
+              <h2>Color Factory: NYC opens August 2018.<br>
+                  August - Month??? 2018 tickets will go on sale<br>
+                  <span>Daytime, Tktk 00th, 00am EST</span>
+              </h2>
+
+              <p>
+                  <span>General admission:</span> <strong>$00</strong><br>
+                  <em>Children age 2 and under are free.</em>.<br>
+                  Tickets must be purchased online, as there<br>
+                  are no tickets available at the door. Tickets<br>
+                  are non-refundable and non-transferable.
+              </p>
+
+            </div>
+
+          </div>
+
+
         </div>
-      </section>
 
+      </section>
 
       <nav class="nav tickets">
         <ul>
           <li class="golden-yellow">
-            <a href="about.html">About</a>
+            <a href="about.html" class="about">>About</a>
           </li>
           <li class="pumpkin">
-            <a href="visiting.html">Visting us</a>
+            <a href="visiting.html" class="visiting">Visiting us</a>
           </li>
           <li class="hot-magenta">
-            <a href="faq.html">Frequently Asked Questions</a>
+            <a href="faq.html" class="faq">Frequently asked questions</a>
           </li>
           <li class="downy">
-            <a href="mcw.html">Manhattan Color Walk</a>
+            <a href="mcw.html" class="mcw">Manhattan color walk</a>
           </li>
           <li class="golden-bell">
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -74,6 +97,8 @@
       <footer id="footer">
         &copy; Color Factory 2018 <a href="contact.html">Contact</a> <a href="#">Instagram</a> <a href="#">Facebook</a>
       </footer>
+
+      <div id="preload" class="visually-hidden"></div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

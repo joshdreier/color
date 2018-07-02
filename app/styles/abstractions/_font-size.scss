@@ -1,4 +1,4 @@
-@mixin font-size($fontsize, $leading: null) {
+@mixin font($fontsize, $leading: null) {
   font-size: ($fontsize / 16) * 1rem;
   @if ($fontsize and $leading) {
     line-height: ceil(($leading / $fontsize) * 10000) / 10000;

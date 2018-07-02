@@ -13,6 +13,12 @@
   animation-iteration-count: 1;
 }
 
+@mixin hide () {
+  animation: hide 1s $base-timing;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
 // KEYFRAMES
 
 @keyframes pop-in {
@@ -42,6 +48,12 @@
 @keyframes reveal {
   from {max-height:   0px; }
   to {max-height: 1000px; }
+}
+
+// Reveal
+@keyframes hide {
+  from {height:   1000px; }
+  to {height: 0; }
 }
 
 // Mobile SubMenu Slide Down
