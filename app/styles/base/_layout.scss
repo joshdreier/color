@@ -8,18 +8,18 @@ body {
   height: 100%;
   overflow-x: hidden;
   background: $white;
- -webkit-font-smoothing: antialiased;
- -moz-font-smoothing: antialiased;
- -o-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- background-image: url('../images/stripe-bg.png');
- background-repeat: repeat;
- background-size: auto;
- background-position: left top;
-
- @include mq($bp-mobile) {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-image: url('../images/stripe-bg-mobile.png');
- }
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: left top;
+
+  @include mq($bp-tablet) {
+    background-image: url('../images/stripe-bg.png');
+  }
 
 }//body
 
@@ -61,21 +61,27 @@ section {
 
 }//section
 
-
 .section-toggle {
   display: none;
   @include remove-button-styles;
   background: url(../images/x.svg);
   @include hide-text;
   @include background-cover;
-  background-size: 19px 19px;
+  background-size: 12px 12px;
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 10px;
-  right: 52px;
+  top: 0;
+  right: 0;
+
+  @include mq($bp-tablet) {
+    background-size: 19px 19px;
+    top: 10px;
+    right: 52px;
+  }
 
   &.active {
     display: block;
   }
-}
+
+}//.section-toggle
