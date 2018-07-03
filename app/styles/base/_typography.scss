@@ -3,6 +3,10 @@ body {
   font-weight: 600;
 }
 
+a {
+  color: $navy-blue;
+}
+
 h1 {
   @extend %stripe;
   @include hide-text;
@@ -26,18 +30,37 @@ h1 {
 
   }
 
+  &.about {
+    background-image: url(../images/about.svg);
+
+    &:hover,
+    &.active {
+      background-image: url(../images/about_over.svg);
+    }
+
+  }
+
 }
 
 h2 {
-  @include font(24, 34);
-  margin-bottom: 10px;
-}
-
-p {
   @include font(14, 22);
 
   @include mq($bp-tablet) {
+    @include font(20, 30);
+  }
+
+}
+
+p {
+  @include font(12, 22);
+  margin: 20px 0;
+
+  @include mq($bp-tablet) {
     @include font(16, 24);
+  }
+
+  &:first-of-type {
+    margin-top: 0;
   }
 
   span {

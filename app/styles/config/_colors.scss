@@ -8,6 +8,8 @@ $black:       #000;
 $grey:        #888;
 $light-grey:  #ebebeb;
 
+$navy-blue: #0058FC; // Link colors
+
 // theme colors // from http://www.color-blindness.com/color-name-hue/
 $torch-red: #f51919;// row 1
 $can-can: #d287af; // row 2
@@ -24,7 +26,11 @@ $shakespeare: #5e9abb;// row 12
 $arsenic: #374148;// row 13
 $green-white: #e1e1d2;// Footer
 
-// classes based on above
+// Etc...
+$dark-pastel-green: #0AAF54;  //About page
+$light-green: #67e6a3; // About page
+
+// stripe classes based on above
 .torch-red          {background-color: $torch-red;}
 .can-can            {background-color: $can-can;}
 .eden               {background-color: $eden;}
@@ -39,3 +45,4 @@ $green-white: #e1e1d2;// Footer
 .shakespeare        {background-color: $shakespeare;}
 .arsenic            {background-color: $arsenic;}
 .green-white        {background-color: $green-white;}
+

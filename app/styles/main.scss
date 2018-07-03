@@ -20,6 +20,7 @@
 @import "abstractions/grid";
 @import "abstractions/hover";
 @import "abstractions/media-query";
+@import "abstractions/transition";
 // Base
 @import "base/layout";
 @import "base/typography";
@@ -34,3 +35,4 @@
 @import "components/dots-animation";
 @import "components/stripes-animation";
 @import "components/tickets";
+@import "components/about";

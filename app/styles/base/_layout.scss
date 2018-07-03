@@ -5,7 +5,6 @@ html {
 }
 
 body {
-  height: 100%;
   overflow-x: hidden;
   background: $white;
   -webkit-font-smoothing: antialiased;
@@ -62,7 +61,7 @@ section {
 }//section
 
 .section-toggle {
-  display: none;
+  opacity: 0;
   @include remove-button-styles;
   background: url(../images/x.svg);
   @include hide-text;
@@ -73,15 +72,16 @@ section {
   position: absolute;
   top: 0;
   right: 0;
+  @include transition;
 
   @include mq($bp-tablet) {
     background-size: 19px 19px;
     top: 10px;
-    right: 52px;
+    right: cols(2);
   }
 
   &.active {
-    display: block;
+    opacity: 1;
   }
 
 }//.section-toggle

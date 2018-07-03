@@ -1,0 +1,71 @@
+.about-container {
+
+  @include mq($bp-tablet) {
+    display: flex;
+  }
+
+  .anchor-links {
+    display: none;
+
+    @include mq($bp-tablet) {
+      display: block;
+      flex: 0 0 cols(13);
+    }
+
+  }//.anchor-links
+
+  .chapters {
+    margin: 0 $gutter-mobile;
+
+    @include mq($bp-tablet) {
+      margin: 0;
+      width: cols(48);
+    }
+
+  }//.chapters
+
+  article {
+    overflow: hidden;
+
+    @include mq($bp-tablet) {
+      padding: cols(3);
+    }
+
+  }//article
+
+  #intro {
+    background-color: $white;
+
+    @include mq($bp-tablet) {
+
+    }
+
+    h2 {
+
+      @include mq($bp-tablet) {
+        @include visually-hidden;
+      }
+
+    }
+
+  }//#intro
+
+  #artists {
+    background-color: $dark-pastel-green;
+
+
+  }//#artists
+
+  #jobs {
+    background-color: $chartreuse-yellow;
+
+
+  }//#jobs
+
+  #sponsors {
+    background-color: $light-green;
+
+
+  }//#sponsors
+
+}//.about-container

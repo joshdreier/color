@@ -2,15 +2,6 @@
   position: relative;
   width: 100%;
 
-  &:first-of-type:not(.tickets) {
-    margin-top: calc(#{$stripe-height} * 3);
-
-    @include mq($bp-mobile) {
-      margin-top: calc(#{$stripe-height-mobile} * 3);
-    }
-
-  }
-
   ul {
 
     > li {
