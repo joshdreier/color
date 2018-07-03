@@ -1,9 +1,5 @@
 .tickets-section {
-  margin-top: calc(#{$stripe-height} * 3);
 
-  @include mq($bp-mobile) {
-    margin-top: calc(#{$stripe-height-mobile} * 3);
-  }
 
 }
 

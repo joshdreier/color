@@ -3,7 +3,7 @@ var CF = CF || {};
 
 // globals
 
-if (window.matchMedia("(min-width: 768px)").matches) {
+if (window.matchMedia('(min-width: 768px)').matches) {
   var stripeHeight = 59;
 } else {
   var stripeHeight = 39;

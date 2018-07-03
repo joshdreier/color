@@ -29,6 +29,7 @@ $bp-desktop: 				'screen and (min-width: #{$desktop-min})';
 
 
 #preload {
+  display: none;
   background: url(../images/about_over.svg),
   url(../images/tickets_over.svg),
   url(../images/visitingus_over.svg),

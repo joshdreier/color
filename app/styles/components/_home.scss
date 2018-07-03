@@ -23,12 +23,10 @@ body.home {
   }//&.delay
 
   #header {
-
-    .logo {
-      @include home-fade();
-    }
-
-  }//header
+    position: absolute;
+    z-index: 10;
+    @include home-fade();
+  }
 
   .nav {
     position: absolute;
