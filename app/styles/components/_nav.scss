@@ -3,7 +3,12 @@
   width: 100%;
 
   &:first-of-type:not(.tickets) {
-    margin-top: 177px;
+    margin-top: calc(#{$stripe-height} * 3);
+
+    @include mq($bp-mobile) {
+      margin-top: calc(#{$stripe-height-mobile} * 3);
+    }
+
   }
 
   ul {
@@ -88,7 +93,12 @@
 
 ul.empty-stripes {
   > li {
-    height: 59px;
+    height: $stripe-height;
     width: 100%;
+
+    @include mq($bp-mobile) {
+      height: $stripe-height-mobile;
+    }
+
   }
 }

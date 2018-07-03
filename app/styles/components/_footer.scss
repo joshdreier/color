@@ -1,10 +1,18 @@
 #footer {
+  width: 100%;
   font-family: 'Poppins';
   color: $black;
   font-size: 12px;
-  line-height: 59px;
+  line-height: $stripe-height;
   padding-left: $gutter-desktop;
   background: $green-white;
+  white-space: nowrap;
+
+  @include mq($bp-mobile) {
+    font-size: 9px;
+    padding-left: $gutter-mobile;
+    line-height: $stripe-height-mobile;
+  }
 
   a {
     display: inline-block;

@@ -8,9 +8,16 @@
     left: $gutter-desktop;
     width: 126px;
     height: 126px;
-    background: url('../images/logo.svg');
+    background-image: url('../images/logo.svg');
     @include background-cover;
     @include hide-text;
+
+    @include mq($bp-mobile) {
+      width: 84px;
+      height: 84px;
+      top: 22px;
+    }
+
   }
 
 }//header

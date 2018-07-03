@@ -2,7 +2,14 @@
 var CF = CF || {};
 
 // globals
-var stripeHeight = 59;
+
+if (window.matchMedia("(min-width: 768px)").matches) {
+  var stripeHeight = 59;
+} else {
+  var stripeHeight = 39;
+}
+
+
 
 // Mobile Main Menu (hamburger)
 CF.mobileMainMenu = (function ($) {

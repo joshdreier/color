@@ -1,5 +1,10 @@
 .tickets-section {
-  margin-top: 177px;
+  margin-top: calc(#{$stripe-height} * 3);
+
+  @include mq($bp-mobile) {
+    margin-top: calc(#{$stripe-height-mobile} * 3);
+  }
+
 }
 
 .tickets-container {
