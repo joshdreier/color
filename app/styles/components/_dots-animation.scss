@@ -12,6 +12,11 @@
   width: 1366px;
   height: 827px;
 
+  @include mq($bp-mobile) {
+    width: 371px;
+    height: 541px;
+  }
+
   .logo {
     display: block;
     opacity: 0;
@@ -24,6 +29,13 @@
     animation: fade-in 1820ms;
     animation-delay: calc(76 * #{$interval});
     animation-fill-mode: forwards;
+
+    @include mq($bp-mobile) {
+      width: 122px;
+      height: 122px;
+      margin: 14px;
+    }
+
   }
 
   .frame {
@@ -32,6 +44,12 @@
     width: 320px;
     height: 320px;
     border-radius: 50%;
+
+    @include mq($bp-mobile) {
+      width: 150px;
+      height: 150px;
+    }
+
   }
 
   .frame1 {
@@ -39,6 +57,12 @@
     left: 248px;
     background: $torch-red;
     @include dot(16, 162);
+
+    @include mq($bp-mobile) {
+      top: 263px;
+      left: -36px;
+    }
+
   }
 
   .frame2 {
@@ -46,6 +70,12 @@
     left: 1201px;
     background: $shakespeare;
     @include dot(28, 145);
+
+    @include mq($bp-mobile) {
+      top: -77px;
+      left: 170px;
+    }
+
   }
 
   .frame3 {
@@ -53,6 +83,12 @@
     left: -50px;
     background: $can-can;
     @include dot(43, 148);
+
+    @include mq($bp-mobile) {
+      top: 107px;
+      left: -85px;
+    }
+
   }
 
   .frame4 {
@@ -61,6 +97,12 @@
     background: $arsenic;
     z-index: 2;
     @include dot(46, 160);
+
+    @include mq($bp-mobile) {
+      top: 97px;
+      left: 202px;
+    }
+
   }
 
   .frame5 {
@@ -69,6 +111,12 @@
     background: $hot-magenta;
     z-index: 2;
     @include dot(49, 154);
+
+    @include mq($bp-mobile) {
+      top: 200px;
+      left: 324px;
+    }
+
   }
 
   .frame6 {
@@ -77,6 +125,12 @@
     background: $eden;
     z-index: 2;
     @include dot(52, 152);
+
+    @include mq($bp-mobile) {
+      top: -56px;
+      left: -41px;
+    }
+
   }
 
   .frame7 {
@@ -85,6 +139,12 @@
     background: $downy;
     z-index: 2;
     @include dot(55, 156);
+
+    @include mq($bp-mobile) {
+      top: 355px;
+      left: 58px;
+    }
+
   }
 
   .frame8 {
@@ -92,6 +152,12 @@
     left: 1092px;
     background: $golden-yellow;
     @include dot(58, 139);
+
+    @include mq($bp-mobile) {
+      top: 479px;
+      left: 156px;
+    }
+
   }
 
   .frame9 {
@@ -99,6 +165,12 @@
     left: -45px;
     background: $golden-bell;
     @include dot(61, 133);
+
+    @include mq($bp-mobile) {
+      top: 464px;
+      left: -65px;
+    }
+
   }
 
   .frame10 {
@@ -106,6 +178,12 @@
     left: 33px;
     background: $deep-sky-blue;
     @include dot(64, 142);
+
+    @include mq($bp-mobile) {
+      top: 396px;
+      left: 297px;
+    }
+
   }
 
   .frame11 {
@@ -113,6 +191,12 @@
     left: 459px;
     background: $chartreuse-yellow;
     @include dot(67, 161);
+
+    @include mq($bp-mobile) {
+      top: 33px;
+      left: 53px;
+    }
+
   }
 
   .frame12 {
@@ -120,6 +204,12 @@
     left: 761px;
     background: $flame-pea;
     @include dot(70, 158);
+
+    @include mq($bp-mobile) {
+      top: 316px;
+      left: 214px;
+    }
+
   }
 
   .frame13 {
@@ -127,6 +217,12 @@
     left: 964px;
     background: $pumpkin;
     @include dot(73, 136);
+
+    @include mq($bp-mobile) {
+      top: 24px;
+      left: 291px;
+    }
+
   }
 
   .frame14 {
@@ -136,6 +232,13 @@
     animation: pop-in;
     animation-delay: calc(76 * #{$interval});
     animation-fill-mode: forwards;
+
+    @include mq($bp-mobile) {
+      top: 195px;
+      left: 111px;
+      z-index: 2;
+    }
+
   }
 
 }//#dots-animation

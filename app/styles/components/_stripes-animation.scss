@@ -18,12 +18,16 @@
     visibility: hidden;
     padding: 0;
     margin: 0;
-    height: 59px;
+    height: $stripe-height;
     width: 100%;
     animation: pop-in 1ms;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+
+    @include mq($bp-mobile) {
+      height: $stripe-height-mobile;
+    }
 
     &:nth-child(14n + 1) {
       background-color: $torch-red;
