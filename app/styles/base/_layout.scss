@@ -85,3 +85,19 @@ section {
   }
 
 }//.section-toggle
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background: $black;
+  margin: 30px auto;
+
+  @include mq($bp-tablet) {
+    margin: 40px auto;
+  }
+
+  @include mq($bp-desktop) {
+    margin: 50px auto;
+  }
+
+}//separator

@@ -61,21 +61,37 @@
 
   article {
     overflow: hidden;
+    text-align: center;
+    padding: 32px cols(6);
 
     @include mq($bp-tablet) {
+      padding: 40px cols(3, 48) 46px;
+      text-align: left;
+    }
+
+    @include mq($bp-desktop) {
       padding: 54px cols(4, 48) 60px cols(3, 48);
+    }
+
+    h2 {
+      margin: 0 auto 20px;
+      @include hide-text;
     }
 
   }//article
 
   #intro {
     background-color: $white;
+    margin-top: 16px;
 
     @include mq($bp-tablet) {
-
+      margin-top: 0;
     }
 
     h2 {
+      width: 110px;
+      height: 110px;
+      @include icon(110px, 110px, 'sowhatiscolorfactory_button_outlined.svg');
 
       @include mq($bp-tablet) {
         @include visually-hidden;
@@ -85,17 +101,126 @@
 
     .visit-us {
       display: block;
+      margin: 0 auto;
       @include hide-text;
-      width: 128px;
-      height: 48px;
-      @include icon(128px, 48px, 'visitus_button_outlined.svg','visitus_button_outlined_on.svg');
+      width: 106px;
+      height: 40px;
+      @include icon(106px, 40px, 'visitus_button_outlined.svg','visitus_button_outlined_on.svg');
+
+      @include mq($bp-tablet) {
+        margin: 0;
+        width: 128px;
+        height: 48px;
+        @include icon(128px, 48px, 'visitus_button_outlined.svg','visitus_button_outlined_on.svg');
+      }
+
     }
 
   }//#intro
 
   #artists {
     background-color: $dark-pastel-green;
+    text-align: center;
 
+    a {
+      color: $golden-yellow;
+    }
+
+    h2 {
+      width: 124px;
+      height: 124px;
+      @include icon(124px, 124px, 'artistscollaborators_button_outlined_on.svg');
+
+      @include mq($bp-tablet) {
+        width: 160px;
+        height: 160px;
+        @include icon(160px, 160px, 'artistscollaborators_button_outlined_on.svg');
+      }
+
+    }//h2
+
+    p {
+
+      @include mq($bp-tablet) {
+        padding-left: cols(1);
+        padding-right: cols(1);
+      }
+
+      @include mq($bp-desktop) {
+        padding-left: cols(4, 48);
+        padding-right: cols(4, 48);
+      }
+
+    }//p
+
+    h3 {
+      margin-top: 28px;
+
+      @include mq($bp-tablet) {
+        margin-top: 36px;
+      }
+
+    }//h3
+
+    .button-container {
+      margin: 12px 0;
+
+      @include mq($bp-tablet) {
+        margin: 26px 0;
+      }
+
+      .button {
+        display: block;
+        @include hide-text;
+        margin-left: auto;
+        margin-right: auto;
+        width: 133px;
+        height: 42px;
+
+        @include mq($bp-tablet) {
+          width: 290px;
+          height: 92px;
+        }
+
+        &.moma {
+          @include icon(133px, 42px, 'sfmoma.svg');
+
+          @include mq($bp-tablet) {
+            @include icon(290px, 92px, 'sfmoma.svg');
+          }
+
+        }//&.moma
+
+        &.cooper {
+          @include icon(133px, 42px, 'cooperhewitt.svg');
+
+          @include mq($bp-tablet) {
+            @include icon(290px, 92px, 'cooperhewitt.svg');
+          }
+
+        }//&.cooper
+
+        &.coming-soon {
+          @include icon(133px, 42px, 'announcements_comingsoon.svg');
+
+          @include mq($bp-tablet) {
+            @include icon(290px, 92px, 'announcements_comingsoon.svg');
+          }
+
+        }//&.cooper
+
+
+      }//.button
+
+    }//.button-container
+
+    .separator {
+
+      @include mq($bp-desktop) {
+        width: cols(43, 48);
+      }
+
+    }//.separator
 
   }//#artists
 
