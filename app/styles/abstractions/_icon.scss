@@ -1,0 +1,94 @@
+// @mixin icon()
+// This mixin adds an icon centered inside a container.
+// The container must have position: absolute, fixed, or relative.
+// To override, after @include icon() add styles to &::before {}
+
+@mixin icon($width: null, $height: null, $image: null, $hover-image: null, $origin: center, $icon-transform: null) {
+  @if ($image) {
+    position: relative;
+  }
+
+  &::before {
+    @if ($width) {
+      width: $width;
+    }
+
+    @if ($height) {
+      height: $height;
+    }
+
+    @if ($image) {
+      content: '';
+      display: block;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-image: url('../images/' + $image);
+      @include background-cover;
+      @include hide-text;
+      transform-origin: $origin;
+      transition:
+        width $base-duration $base-timing,
+        height $base-duration $base-timing,
+        opacity $base-duration $base-timing,
+        transform $base-duration $base-timing;
+    }
+
+    @if ($icon-transform) {
+      transform: $icon-transform;
+    }
+    @else {
+      transform: translate(-50%, -50%);
+    }
+  } // &::before
+
+  &::after {
+    @if ($width) {
+      width: $width;
+    }
+
+    @if ($height) {
+      height: $height;
+    }
+  }
+
+  @if ($hover-image) {
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-image: url('../images/' + $hover-image);
+      @include background-cover;
+      opacity: 0;
+      @include hide-text;
+      transform-origin: $origin;
+      transition:
+        width $base-duration $base-timing,
+        height $base-duration $base-timing,
+        opacity $base-duration $base-timing,
+        transform $base-duration $base-timing;
+
+      @if ($icon-transform) {
+        transform: $icon-transform;
+      }
+      @else {
+        transform: translate(-50%, -50%);
+      }
+    } // &::after
+
+    &:hover {
+
+      &::before {
+        opacity: 0;
+      } // &::after
+
+      &::after {
+        opacity: 1;
+      } // &::after
+    } // &:hover
+  }
+} // @mixin icon

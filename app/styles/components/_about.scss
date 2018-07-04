@@ -6,10 +6,40 @@
 
   .anchor-links {
     display: none;
+    padding-top: 40px;
 
     @include mq($bp-tablet) {
       display: block;
-      flex: 0 0 cols(13);
+      width: 260px;
+    }
+
+    li {
+      margin-bottom: 17px;
+    }
+
+    a {
+      display: block;
+      @include hide-text;
+    }
+
+    .intro {
+      height: 134px;
+      @include icon(134px, 134px, 'sowhatiscolorfactory_button_outlined.svg','sowhatiscolorfactory_button_outlined_on.svg');
+    }
+
+    .artists {
+      height: 160px;
+      @include icon(160px, 160px, 'artistscollaborators_button_outlined_off.svg','artistscollaborators_button_outlined_on.svg');
+    }
+
+    .jobs {
+      height: 160px;
+      @include icon(160px, 160px, 'jobs_button_outlined_off.svg','jobs_button_outlined_on.svg');
+    }
+
+    .sponsors {
+      height: 134px;
+      @include icon(134px, 134px, 'sponsors_button_outlined_off.svg','sponsors_button_outlined_on.svg');
     }
 
   }//.anchor-links
@@ -18,8 +48,13 @@
     margin: 0 $gutter-mobile;
 
     @include mq($bp-tablet) {
-      margin: 0;
-      width: cols(48);
+      flex: 1;
+      margin: 0 cols(3) 0 0;
+      padding-top: 40px;
+    }
+
+    @include mq($bp-desktop) {
+      margin-right: cols(7, 48);
     }
 
   }//.chapters
@@ -28,7 +63,7 @@
     overflow: hidden;
 
     @include mq($bp-tablet) {
-      padding: cols(3);
+      padding: 54px cols(4, 48) 60px cols(3, 48);
     }
 
   }//article
@@ -46,6 +81,14 @@
         @include visually-hidden;
       }
 
+    }
+
+    .visit-us {
+      display: block;
+      @include hide-text;
+      width: 128px;
+      height: 48px;
+      @include icon(128px, 48px, 'visitus_button_outlined.svg','visitus_button_outlined_on.svg');
     }
 
   }//#intro

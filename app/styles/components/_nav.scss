@@ -12,11 +12,13 @@
         height: $stripe-height;
         width: 100%;
         background-repeat: no-repeat;
-        background-position: $gutter-desktop 0;
+        background-size: auto $stripe-height;
+        background-position: 35px 0;
 
         @include mq($bp-mobile) {
           height: $stripe-height-mobile;
-          background-position: $gutter-mobile 0;
+          background-position: 22px 0;
+          background-size: auto $stripe-height-mobile;
         }
 
         &.tickets {
