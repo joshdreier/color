@@ -10,38 +10,7 @@ if (window.matchMedia('(min-width: 768px)').matches) {
 }
 
 
-
-// Mobile Main Menu (hamburger)
-CF.mobileMainMenu = (function ($) {
-
-  function init(){
-
-    var $mobileToggle = $('.mobile-menu-toggle');
-
-    $mobileToggle.on('click', function(e) {
-      e.preventDefault();
-
-      if (!$(this).is('.active')) {
-        $(this).addClass('active').attr('aria-expanded', 'true');
-        $('body').addClass('mobile-nav-open');
-      }
-      else {
-        $(this).removeClass('active').attr('aria-expanded', 'false');
-        $('body').removeClass('mobile-nav-open');
-      }
-
-    });
-
-  }
-
-  if($('.mobile-menu-toggle').length) {
-    init();
-  }
-
-})(jQuery);
-
-
-//
+// Stripe Animation
 CF.stripeAnimation = (function ($) {
 
   function init(){
@@ -74,7 +43,7 @@ CF.stripeAnimation = (function ($) {
 })(jQuery);
 
 
-// Mobile Main Menu (hamburger)
+// Section Toggle
 CF.sectionToggle = (function ($) {
 
   function init(){
@@ -129,5 +98,44 @@ CF.sectionToggle = (function ($) {
 
 })(jQuery);
 
+
+// Smooth Scroll to Anchor
+CF.anchorScroll = (function ($) {
+
+  function init(){
+
+    // Smooth Scrolling
+    $('.smooth-scroll').click(function(e) {
+
+      e.preventDefault();
+
+      var target = this.hash;
+      var $target = $(target);
+
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+      }, 500, 'swing', function () {
+          window.location.hash = target;
+      });
+
+    });
+
+
+    // Back to Top, Smooth Scrolling
+    $('.back-to-top').click(function(e) {
+
+      e.preventDefault();
+
+      $('html, body').animate({scrollTop: 0}, 500);
+
+    });
+
+  }
+
+  if($('.anchor-links').length) {
+    init();
+  }
+
+})(jQuery);
 
 

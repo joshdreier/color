@@ -45,21 +45,23 @@
   }//.anchor-links
 
   .chapters {
-    margin: 0 $gutter-mobile;
+    margin: 0 $gutter-mobile 50px;
 
     @include mq($bp-tablet) {
       flex: 1;
-      margin: 0 cols(3) 0 0;
+      margin: 0 cols(3) 70px 0;
       padding-top: 40px;
     }
 
     @include mq($bp-desktop) {
       margin-right: cols(7, 48);
+      margin-bottom: 90px;
     }
 
   }//.chapters
 
   article {
+    @include clearfix;
     position: relative;
     overflow: hidden;
     text-align: center;
