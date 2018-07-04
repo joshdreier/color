@@ -41,7 +41,7 @@
 
     }
 
-  }
+  }//.button-container
 
   .text-container {
     @include transition;
@@ -51,7 +51,6 @@
 
     h2 {
       @include font(12, 22);
-      margin: 20px 0;
 
       @include mq($bp-tablet) {
         @include font(16, 24);
@@ -68,7 +67,6 @@
 
     }//p
 
-  }
-
+  }//.text-container
 
 }//.tickets-container

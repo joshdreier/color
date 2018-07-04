@@ -60,6 +60,7 @@
   }//.chapters
 
   article {
+    position: relative;
     overflow: hidden;
     text-align: center;
     padding: 32px cols(6);
@@ -76,6 +77,28 @@
     h2 {
       margin: 0 auto 20px;
       @include hide-text;
+    }
+
+    .back-to-top {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include hide-text;
+      width: 33px;
+      height: 33px;
+      background-image: url('../images/Down_Arrow_Black.svg');
+      background-size: 16px auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: rotate(180deg);
+
+      @include mq($bp-tablet) {
+        margin: 0;
+        width: 70px;
+        height: 70px;
+        background-size: 22px auto;
+      }
+
     }
 
   }//article
@@ -224,16 +247,125 @@
 
   }//#artists
 
+
   #jobs {
     background-color: $chartreuse-yellow;
 
+    h2 {
+      @include icon(133px, 133px, 'jobs_button_outlined_on.svg');
+
+      @include mq($bp-tablet) {
+        @include icon(154px, 154px, 'jobs_button_outlined_on.svg');
+      }
+
+    }//h2
 
   }//#jobs
 
   #sponsors {
     background-color: $light-green;
 
+    h2 {
+      @include icon(133px, 133px, 'sponsors_button_outlined_on.svg');
+
+      @include mq($bp-tablet) {
+        @include icon(154px, 154px, 'sponsors_button_outlined_on.svg');
+      }
+
+    }//h2
+
+    .logos {
+      display: flex;
+      flex-flow: column;
+      @include clearfix;
+
+      @include mq($bp-tablet) {
+        flex-flow: row;
+      }
+
+      > li {
+
+        @include mq($bp-tablet) {
+          margin-right: 10px;
+        }
+
+        @include mq($bp-desktop) {
+          margin-right: 50px;
+        }
+
+        &:last-child {
+
+          @include mq($bp-tablet) {
+            margin-right: 50px;
+          }
+
+        }//&:last-child
+
+      }// >li
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      a {
+        display: block;
+
+        @include mq($bp-mobile) {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+      }//a
+
+    }//.logos
 
   }//#sponsors
+
+  .jobs-container,
+  .sponsors-container {
+    display: flex;
+    flex-flow: column;
+
+    @include mq($bp-tablet) {
+      flex-flow: row;
+    }
+
+    .title-container {
+
+      h2 {
+        width: 133px;
+        height: 133px;
+
+        @include mq($bp-tablet) {
+          width: 154px;
+          height: 154px;
+        }
+
+      }//h2
+
+    }//.title-container
+
+    .text-container {
+      padding-left: 5%;
+      padding-right: 5%;
+
+      @include mq($bp-tablet) {
+        margin-left: 30px;
+        padding: 16px 0 0 0;
+      }
+
+      h2 {
+        @include font(12, 22);
+      }
+
+      p {
+        @include font(12, 22);
+      }//p
+
+    }//.text-container
+
+  }//.jobs-container, sponsors-container
 
 }//.about-container
