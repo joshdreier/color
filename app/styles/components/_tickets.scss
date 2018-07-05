@@ -11,6 +11,7 @@
   }
 
   .button-container {
+    position: relative;
     margin-bottom: 16px;
 
     @include mq($bp-tablet) {
@@ -19,24 +20,24 @@
 
     a {
       display: block;
-      background-image: url(../images/buytickets_button_outlinedfont.svg);
-      @include background-cover;
-      @include hide-text;
-      @include transition;
       width: 108px;
       height: 108px;
+      @include icon(108px, 108px, 'buytickets_button_outlinedfont.svg','buytickets_button_over_outlinedfont.svg');
+      @include hide-text;
+
 
       @include mq($bp-tablet) {
         width: 130px;
         height: 130px;
-      }
-
-      @include hover {
-        background-image: url(../images/buytickets_button_over_outlinedfont.svg);
+        @include icon(130px, 130px, 'buytickets_button_outlinedfont.svg','buytickets_button_over_outlinedfont.svg');
       }
 
       &:active {
-        background-image: url(../images/buytickets_button_on_outlinedfont.svg);
+
+        &:after {
+          background-image: url(../images/buytickets_button_on_outlinedfont.svg);
+        }
+
       }
 
     }
