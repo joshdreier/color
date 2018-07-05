@@ -9,17 +9,28 @@ if (window.matchMedia('(min-width: 768px)').matches) {
   var stripeHeight = 39;
 }
 
-
 // Stripe Animation
-CF.stripeAnimation = (function ($) {
+CF.dotsAnimation = (function ($) {
 
   function init(){
+
+    var $lateFade = $('.late-fade');
 
     var $browserHeight = $(window).height();
     var stripesToFit = Math.ceil($browserHeight / stripeHeight);
 
-    var $stripeContainer = $('#stripes-animation-container')
-    var $stripeList = $('#stripes-animation')
+    var $stripes = $('#stripes-animation');
+    var $dots = $('#dots-animation');
+
+    // loop to add dots
+    var dotsCount = 14;
+    var j;
+    for (j = 1; j < dotsCount; j++) {
+      $dots.append('<div class="frame frame' + j +'"></div> ');
+    }
+    //logo
+    $dots.append('<div class="frame frame14"><span class="logo">Color Factory</span></div> ');
+
 
     // loop to add stripes
     var i;
@@ -28,16 +39,29 @@ CF.stripeAnimation = (function ($) {
 
     for (i = 0; i < stripesToFit; i++) {
       delay -= 50;
-      $stripeList.append('<li class="stripe stripe' + i + '" style="animation-delay: ' + delay + 'ms;"></li> ');
+      $stripes.append('<li class="stripe stripe' + i + '" style="animation-delay: ' + delay + 'ms;"></li> ');
     }
 
+
+    // delay other page elements fading in, header footer nav
+    /* @keyframes duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+    $lateFade.css('animation', '820ms linear 7200ms 1 normal forwards running fade-in');
+
     // add delay to fill in background in case user resizes window
-    setTimeout(function(){ $('body').addClass('delay') }, delay + 1000);
+    //setTimeout(function(){ $('body').addClass('delay') }, delay + 1000);
 
   }
 
-  if($('#stripes-animation').length) {
-    init();
+  if($('.home').length) {
+
+    $('<img/>').attr('src', '../images/cityscape.jpg').on('load', function() {
+      $(this).remove(); // prevent memory leaks as @benweet suggested
+      // add background image
+      $('body').css('background-image', 'url(../images/cityscape.jpg)');
+      // start animation after image loads
+      init();
+   });
+
   }
 
 })(jQuery);

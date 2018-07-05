@@ -1,16 +1,9 @@
-@mixin home-fade() {
-  opacity: 0;
-  animation: fade-in 820ms;
-  animation-delay: calc(180 * #{$interval});
-  animation-fill-mode: forwards;
-}
-
 body.home {
-  background-image: url('../images/cityscape.jpg');
   @include background-cover;
   overflow: hidden;
   height: 100%;
 
+  // add stripes after animation for browser resize event
   &.delay {
     background-image: url('../images/stripe-bg.png');
     background-repeat: repeat;
@@ -24,17 +17,18 @@ body.home {
   }//&.delay
 
   #header {
+    opacity: 0;
     position: absolute;
     z-index: 10;
-    @include home-fade();
   }
 
   .nav {
+    opacity: 0;
     position: absolute;
     z-index: 10;
     top: calc(#{$stripe-height} * 3);
     margin: 0;
-    @include home-fade();
+
 
     @include mq($bp-mobile) {
       top: calc(#{$stripe-height-mobile} * 3);
@@ -43,10 +37,9 @@ body.home {
   }// #nav
 
   #footer {
+    opacity: 0;
     position: absolute;
     z-index: 10;
-    @include home-fade();
-
     top: calc(#{$stripe-height} * 13);
 
     @include mq($bp-mobile) {
