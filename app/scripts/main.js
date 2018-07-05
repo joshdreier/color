@@ -57,7 +57,7 @@ CF.dotsAnimation = (function ($) {
     $('<img/>').attr('src', '../images/cityscape.jpg').on('load', function() {
       $(this).remove(); // prevent memory leaks as @benweet suggested
       // add background image
-      $('body').css('background-image', 'url(../images/cityscape.jpg)');
+      $('body').css('background-image', 'url(/images/cityscape.jpg)');
       // start animation after image loads
       init();
    });
