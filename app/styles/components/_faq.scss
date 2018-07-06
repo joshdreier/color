@@ -1,10 +1,12 @@
 .faq-container {
   background: $white;
-  margin: 0 $gutter-mobile 50px;
+  margin: 20px $gutter-mobile 40px;
+  min-height: 600px;
+  padding: 20px;
 
   @include mq($bp-tablet) {
-    margin: 0 cols(7) 70px cols(7) ;
-    padding-top: 40px;
+    margin: 50px cols(7) 70px cols(7) ;
+    padding: 50px;
   }
 
   @include mq($bp-desktop) {
@@ -13,5 +15,178 @@
     margin-top: 68px;
   }
 
+  .faq-menu {
+    padding: 0;
+    margin: 0;
+
+    h3 {
+      margin: 0 0 11px 0;
+      padding-left: 26px;
+
+      button {
+        @include remove-button-styles;
+        width: 100%;
+        padding-right: 30px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700; // bold
+        @include font(12, 16);
+        background: url('../images/FAQ_plus_sign_12x12.svg') no-repeat right center;
+        background-size: 12px 12px;
+
+        @include mq($bp-tablet) {
+          @include font(20, 24);
+        }
+
+        &.active {
+          background-image: url('../images/x.svg');
+        }
+
+      }
+
+    }//h3
+
+    p {
+      display: none;
+      padding: 0 0 14px;
+      @include font(10, 15);
+      font-weight: 500; // bold
+
+      @include mq($bp-tablet) {
+        @include font(13, 20);
+        font-weight: 700; // bold
+      }
+
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 13px;
+      border-bottom: solid 3px $black;
+
+      @include mq($bp-tablet) {
+        border-bottom: solid 5px $black;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+
+        @include mq($bp-tablet) {
+          top: 4px;
+        }
+
+      }
+
+      &:nth-child(17n +1) {
+        &::before {
+          background-color: $golden-bell;
+        }
+      }
+
+      &:nth-child(17n + 2) {
+        &::before {
+          background-color: $pumpkin;
+        }
+      }
+
+      &:nth-child(17n + 3) {
+        &::before {
+          background-color: $chartreuse-yellow;
+        }
+      }
+
+      &:nth-child(17n + 4) {
+        &::before {
+          background-color: $deep-sky-blue;
+        }
+      }
+
+      &:nth-child(17n + 5) {
+        &::before {
+          background-color: $arsenic;
+        }
+      }
+
+      &:nth-child(17n + 6) {
+        &::before {
+          background-color: $eden;
+        }
+      }
+
+      &:nth-child(17n + 7) {
+        &::before {
+          background-color: $downy;
+        }
+      }
+
+      &:nth-child(17n + 8) {
+        &::before {
+          background-color: $can-can;
+        }
+      }
+
+      &:nth-child(17n + 9) {
+        &::before {
+          background-color: $cinnabar;
+        }
+      }
+
+      &:nth-child(17n + 10) {
+        &::before {
+          background-color: $rosebud;
+        }
+      }
+
+      &:nth-child(17n + 11) {
+        &::before {
+          background-color: $flame-pea;
+        }
+      }
+
+      &:nth-child(17n + 12) {
+        &::before {
+          background-color: $dawn;
+        }
+      }
+
+      &:nth-child(17n + 12) {
+        &::before {
+          background-color: $wasabi;
+        }
+      }
+
+      &:nth-child(17n + 14) {
+        &::before {
+          background-color: $hot-magenta;
+        }
+      }
+
+      &:nth-child(17n + 15) {
+        &::before {
+          background-color: $mulberry;
+        }
+      }
+
+      &:nth-child(17n + 16) {
+        &::before {
+          background-color: $golden-yellow;
+        }
+      }
+
+      &:nth-child(17n + 17) {
+        &::before {
+          background-color: $dark-pastel-green;
+        }
+      }
+
+    }//li
+
+  }//.faq-menu
 
 }//.faq-container

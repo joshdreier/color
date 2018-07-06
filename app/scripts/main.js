@@ -172,10 +172,22 @@ CF.FrequentlyAskedQuestions = (function ($) {
     // load exernal data
     $.getScript('scripts/faq.js', function() {
       $.each( faq, function( i, val ) {
-
         // add content to DOM
-        $faqsContainer.append('<li><h3><button>' + this.q + '</button></h3><p>' + this.a + '</p></li>');
+        $faqsContainer.append('<li><h3><button aria-expanded="false">' + this.q + '</button></h3><p>' + this.a + '</p></li>');
       });
+    });
+
+    $(document).on('click', '.faq-menu button', function(e) {
+      e.preventDefault();
+
+      if (!$(this).is('.active')) {
+        $(this).addClass('active').attr('aria-expanded', 'true');
+        $(this).parent('h3').siblings('p').slideDown(250);
+      }
+      else {
+        $(this).removeClass('active').attr('aria-expanded', 'false');
+        $(this).parent('h3').siblings('p').slideUp(250);
+      }
     });
 
   }
