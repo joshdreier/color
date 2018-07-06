@@ -14,6 +14,8 @@
         background-repeat: no-repeat;
         background-size: auto $stripe-height;
         background-position: 35px 0;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translate3D(0, 0, 0);
 
         @include mq($bp-mobile) {
           height: $stripe-height-mobile;

@@ -162,4 +162,28 @@ CF.anchorScroll = (function ($) {
 
 })(jQuery);
 
+// Comments Box
+CF.FrequentlyAskedQuestions = (function ($) {
+
+  function init(){
+
+    var $faqsContainer = $('.faq-menu');
+
+    // load exernal data
+    $.getScript('scripts/faq.js', function() {
+      $.each( faq, function( i, val ) {
+
+        // add content to DOM
+        $faqsContainer.append('<li><h3><button>' + this.q + '</button></h3><p>' + this.a + '</p></li>');
+      });
+    });
+
+  }
+
+  if($('.faq-menu').length) {
+    init();
+  }
+
+})(jQuery);
+
 

@@ -50,6 +50,16 @@ h1 {
 
   }
 
+  &.faq {
+    background-image: url(../images/faq.svg);
+
+    &:hover,
+    &.active {
+      background-image: url(../images/faq_over.svg);
+    }
+
+  }
+
 }
 
 h2 {
