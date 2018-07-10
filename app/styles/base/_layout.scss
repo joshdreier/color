@@ -101,3 +101,25 @@ section {
   }
 
 }//separator
+
+.back-to-top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  @include hide-text;
+  width: 33px;
+  height: 33px;
+  background-image: url('../images/Down_Arrow_Black.svg');
+  background-size: 16px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+
+  @include mq($bp-tablet) {
+    margin: 0;
+    width: 70px;
+    height: 70px;
+    background-size: 22px auto;
+  }
+
+}

@@ -2,11 +2,11 @@
   background: $white;
   margin: 20px $gutter-mobile 40px;
   min-height: 600px;
-  padding: 20px;
+  padding: 10px 20px 20px;
 
   @include mq($bp-tablet) {
     margin: 50px cols(7) 70px cols(7) ;
-    padding: 50px;
+    padding: 30px 50px 50px;
   }
 
   @include mq($bp-desktop) {
@@ -20,13 +20,15 @@
     margin: 0;
 
     h3 {
-      margin: 0 0 11px 0;
+      margin: 0;
       padding-left: 26px;
 
       button {
         @include remove-button-styles;
         width: 100%;
         padding-right: 30px;
+        padding-bottom: 11px;
+        padding-top: 13px;
         font-family: 'Poppins', sans-serif;
         font-weight: 700; // bold
         @include font(12, 16);
@@ -62,7 +64,6 @@
 
     li {
       position: relative;
-      margin-bottom: 13px;
       border-bottom: solid 3px $black;
 
       @include mq($bp-tablet) {
@@ -73,14 +74,14 @@
         content: '';
         display: block;
         position: absolute;
-        top: 2px;
+        top: 13px;
         left: 0;
         width: 15px;
         height: 15px;
         border-radius: 50%;
 
         @include mq($bp-tablet) {
-          top: 4px;
+          top: 17px;
         }
 
       }

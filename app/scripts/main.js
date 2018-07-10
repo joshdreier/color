@@ -156,7 +156,7 @@ CF.anchorScroll = (function ($) {
 
   }
 
-  if($('.anchor-links').length) {
+  if($('.back-to-top').length) {
     init();
   }
 

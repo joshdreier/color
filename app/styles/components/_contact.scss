@@ -1,0 +1,41 @@
+.contact-container {
+  display: flex;
+  padding: 12px 0 30px $gutter-mobile;
+  flex-flow: column;
+  min-height: 351px;
+
+  @include mq($bp-tablet) {
+    flex-flow: row;
+    min-height: 236px;
+    padding: 0 0 30px 190px;
+  }
+
+  .text-container {
+    @include transition;
+    @include mq($bp-tablet) {
+      margin-left: 22px;
+    }
+
+    h2 {
+      @include font(12, 22);
+      letter-spacing: .05em;
+
+      @include mq($bp-tablet) {
+        @include font(16, 24);
+      }
+
+    }
+
+    p {
+      @include font(12, 22);
+      letter-spacing: .05em;
+
+      @include mq($bp-tablet) {
+        @include font(16, 24);
+      }
+
+    }//p
+
+  }//.text-container
+
+}//.contact-container

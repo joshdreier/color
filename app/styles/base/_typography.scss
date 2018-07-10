@@ -60,6 +60,26 @@ h1 {
 
   }
 
+  &.visiting {
+    background-image: url(../images/visitingus.svg);
+
+    &:hover,
+    &.active {
+      background-image: url(../images/visitingus_over.svg);
+    }
+
+  }
+
+  &.contact {
+    background-image: url(../images/contact.svg);
+
+    &:hover,
+    &.active {
+      background-image: url(../images/contact_over.svg);
+    }
+
+  }
+
 }
 
 h2 {
@@ -150,6 +170,21 @@ p {
   }
 
 }//p
+
+%small-p {
+
+  @include font(10, 16);
+  letter-spacing: .04em;
+
+  @include mq($bp-tablet) {
+    @include font(12, 18);
+  }
+
+  @include mq($bp-desktop) {
+    @include font(14, 20);
+  }
+
+}
 
 %stripe {
   display: block;
