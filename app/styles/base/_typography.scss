@@ -85,7 +85,7 @@ h3 {
   font-weight: 900; //black
   margin: 12px 0;
   text-transform: uppercase;
-  letter-spacing: .05em;
+  letter-spacing: .083333em;
 
   @include mq($bp-tablet) {
     @include font(12, 18);
@@ -117,6 +117,7 @@ h3 {
 
 p {
   @include font(14, 20);
+  letter-spacing: .03em;
   margin: 20px 0;
 
   @include mq($bp-tablet) {
@@ -137,6 +138,7 @@ p {
 
   &.small {
     @include font(10, 16);
+    letter-spacing: .04em;
 
     @include mq($bp-tablet) {
       @include font(12, 18);

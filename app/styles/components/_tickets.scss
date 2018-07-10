@@ -52,6 +52,7 @@
 
     h2 {
       @include font(12, 22);
+      letter-spacing: .05em;
 
       @include mq($bp-tablet) {
         @include font(16, 24);
@@ -61,6 +62,7 @@
 
     p {
       @include font(12, 22);
+      letter-spacing: .05em;
 
       @include mq($bp-tablet) {
         @include font(16, 24);

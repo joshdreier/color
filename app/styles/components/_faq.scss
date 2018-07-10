@@ -30,6 +30,7 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 700; // bold
         @include font(12, 16);
+        letter-spacing: .03em;
         background: url('../images/FAQ_plus_sign_12x12.svg') no-repeat right center;
         background-size: 12px 12px;
 
@@ -50,6 +51,7 @@
       padding: 0 0 14px;
       @include font(10, 15);
       font-weight: 500; // bold
+      letter-spacing: .035em;
 
       @include mq($bp-tablet) {
         @include font(13, 20);
@@ -155,7 +157,7 @@
         }
       }
 
-      &:nth-child(17n + 12) {
+      &:nth-child(17n + 13) {
         &::before {
           background-color: $wasabi;
         }

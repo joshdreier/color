@@ -125,6 +125,10 @@
 
     }
 
+    p {
+      letter-spacing: .044em;
+    }
+
     .visit-us {
       display: block;
       margin: 0 auto;
@@ -166,6 +170,7 @@
     }//h2
 
     p {
+      letter-spacing: .04em;
 
       @include mq($bp-tablet) {
         padding-left: cols(1);
@@ -270,12 +275,7 @@
 
     h2 {
       @include icon(133px, 133px, 'sponsors_button_outlined_on.svg');
-
-      @include mq($bp-tablet) {
-        @include icon(154px, 154px, 'sponsors_button_outlined_on.svg');
-      }
-
-    }//h2
+    }
 
     .logos {
       display: flex;
@@ -340,12 +340,6 @@
       h2 {
         width: 133px;
         height: 133px;
-
-        @include mq($bp-tablet) {
-          width: 154px;
-          height: 154px;
-        }
-
       }//h2
 
     }//.title-container
@@ -364,7 +358,18 @@
       }
 
       p {
-        @include font(12, 22);
+        padding-right: 10%;
+
+        @include font(10, 16);
+        letter-spacing: .04em;
+
+        @include mq($bp-tablet) {
+          @include font(12, 18);
+        }
+
+        @include mq($bp-desktop) {
+          @include font(14, 20);
+        }
       }//p
 
     }//.text-container
