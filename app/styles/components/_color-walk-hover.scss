@@ -1,0 +1,115 @@
+#color-walk-container {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 500px;
+  width: 100%;
+  height: 100%;
+  display: none; //load with js
+
+  @include mq($bp-mobile) {
+    display: none !important;
+  }
+
+  > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      height: $stripe-height;
+      width: 100%;
+
+      > .follower {
+        position: relative;
+        opacity: 0;
+        width: 155px;
+        height: 400px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none; /* Very important to prevent the follower from messing up with the mouse move */
+        background-size: 155px 200px;
+        background-position: left top;
+        background-repeat: no-repeat;
+
+        &.follower1 {
+          background-image: url('../images/colorwalk_rollover_torch-red.svg');
+          background-position-y: bottom;
+        }
+
+        &.follower2 {
+          background-image: url('../images/colorwalk_rollover_can-can.svg');
+          background-position-y: bottom;
+        }
+
+        &.follower3 {
+          background-image: url('../images/colorwalk_rollover_eden.svg');
+          background-position-y: bottom;
+        }
+
+        &.follower4 {
+          background-image: url('../images/colorwalk_rollover_deep-sky-blue.svg');
+          background-position-y: bottom;
+        }
+
+        &.follower5 {
+          background-image: url('../images/colorwalk_rollover_golden-yellow.svg');
+        }
+
+        &.follower6 {
+          background-image: url('../images/colorwalk_rollover_pumpkin.svg');
+        }
+
+        &.follower7 {
+          background-image: url('../images/colorwalk_rollover_hot-magenta.svg');
+        }
+
+        &.follower8 {
+          background-image: url('../images/colorwalk_rollover_downy.svg');
+        }
+
+        &.follower9 {
+          background-image: url('../images/colorwalk_rollover_golden-bell.svg');
+        }
+
+        &.follower10 {
+          background-image: url('../images/colorwalk_rollover_chartreuse-yellow.svg');
+        }
+
+        &.follower11 {
+          background-image: url('../images/colorwalk_rollover_flame-pea.svg');
+        }
+
+        &.follower12 {
+          background-image: url('../images/colorwalk_rollover_shakespeare.svg');
+        }
+
+        &.follower13 {
+          background-image: url('../images/colorwalk_rollover_arsenic.svg');
+        }
+
+        &.follower14 {
+          background-image: url('../images/colorwalk_rollover_green-white.svg');
+        }
+
+      }
+
+      @include hover {
+
+        > .follower {
+          opacity: 1;
+        }
+
+      }
+
+    }// li
+
+  }
+
+}//#color-walk

@@ -123,3 +123,20 @@ section {
   }
 
 }
+
+#preload {
+  @include mq($bp-desktop) {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    visibility: hidden;
+    background: url(../images/about_over.svg),
+    url(../images/tickets_over.svg),
+    url(../images/visitingus_over.svg),
+    url(../images/faq_over.svg),
+    url(../images/manhattancolorwalk_over.svg),
+    url(../images/contact_over.svg),
+    url(../images/buytickets_button_over_outlinedfont.svg),
+    url(../images/buytickets_button_on_outlinedfont.svg);
+  }
+}

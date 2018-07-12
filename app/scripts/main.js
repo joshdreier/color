@@ -22,6 +22,8 @@ CF.dotsAnimation = (function ($) {
     var $stripes = $('#stripes-animation');
     var $dots = $('#dots-animation');
 
+    var $colorWalk = $('#color-walk-container');
+
     // loop to add dots
     var dotsCount = 14;
     var j;
@@ -49,6 +51,9 @@ CF.dotsAnimation = (function ($) {
 
     // add delay to fill in background in case user resizes window
     //setTimeout(function(){ $('body').addClass('delay') }, delay + 1000);
+
+    // load colorwalk
+    setTimeout(function(){ $colorWalk.show(); }, delay + 1000);
 
   }
 
@@ -162,8 +167,8 @@ CF.anchorScroll = (function ($) {
 
 })(jQuery);
 
-// Comments Box
-CF.FrequentlyAskedQuestions = (function ($) {
+// FAQs
+CF.frequentlyAskedQuestions = (function ($) {
 
   function init(){
 
@@ -197,5 +202,135 @@ CF.FrequentlyAskedQuestions = (function ($) {
   }
 
 })(jQuery);
+
+
+// Homepage ColorWalk animations
+CF.colorWalkHover = (function ($) {
+
+  function init(){
+
+    var parent1 = document.querySelector('.parent1');
+    var parent2 = document.querySelector('.parent2');
+    var parent3 = document.querySelector('.parent3');
+    var parent4 = document.querySelector('.parent4');
+    var parent5 = document.querySelector('.parent5');
+    var parent6 = document.querySelector('.parent6');
+    var parent7 = document.querySelector('.parent7');
+    var parent8 = document.querySelector('.parent8');
+    var parent9 = document.querySelector('.parent9');
+    var parent10 = document.querySelector('.parent10');
+    var parent11 = document.querySelector('.parent11');
+    var parent12 = document.querySelector('.parent12');
+    var parent13 = document.querySelector('.parent13');
+    var parent14 = document.querySelector('.parent14');
+    var displays;
+
+    function onMouseMove( e ) {
+
+        // this refers to the caller
+        console.log(this)
+
+        // Find its child
+       var follower = this.querySelector('.follower')
+
+        TweenMax.to(follower, 0, {
+            x: e.offsetX,
+            y: e.offsetY,
+            ease:Power4.easeOut
+        })
+
+    }
+
+    function onMouseLeave( e ) {
+        const rect = this.getBoundingClientRect()
+        const center = {
+            w: Math.round(rect.width * 0.5),
+            h: Math.round(rect.height * 0.5)
+        }
+        const trg = this.querySelector('.follower')
+
+        TweenMax.to( trg, 1, {
+            x: center.w,
+            y: center.h,
+            ease: Back.easeInOut
+        } )
+    }
+
+
+    function init() {
+
+        // Listen for mouse movement when over either one of the parents
+        parent1.addEventListener('mousemove', onMouseMove);
+        parent2.addEventListener('mousemove', onMouseMove);
+        parent3.addEventListener('mousemove', onMouseMove);
+        parent4.addEventListener('mousemove', onMouseMove);
+        parent5.addEventListener('mousemove', onMouseMove);
+        parent6.addEventListener('mousemove', onMouseMove);
+        parent7.addEventListener('mousemove', onMouseMove);
+        parent8.addEventListener('mousemove', onMouseMove);
+        parent9.addEventListener('mousemove', onMouseMove);
+        parent10.addEventListener('mousemove', onMouseMove);
+        parent11.addEventListener('mousemove', onMouseMove);
+        parent12.addEventListener('mousemove', onMouseMove);
+        parent13.addEventListener('mousemove', onMouseMove);
+        parent14.addEventListener('mousemove', onMouseMove);
+
+        parent1.addEventListener('mouseleave', onMouseLeave);
+        parent2.addEventListener('mouseleave', onMouseLeave);
+        parent3.addEventListener('mouseleave', onMouseLeave);
+        parent4.addEventListener('mouseleave', onMouseLeave);
+        parent5.addEventListener('mouseleave', onMouseLeave);
+        parent6.addEventListener('mouseleave', onMouseLeave);
+        parent7.addEventListener('mouseleave', onMouseLeave);
+        parent8.addEventListener('mouseleave', onMouseLeave);
+        parent9.addEventListener('mouseleave', onMouseLeave);
+        parent10.addEventListener('mouseleave', onMouseLeave);
+        parent11.addEventListener('mouseleave', onMouseLeave);
+        parent12.addEventListener('mouseleave', onMouseLeave);
+        parent13.addEventListener('mouseleave', onMouseLeave);
+        parent14.addEventListener('mouseleave', onMouseLeave);
+
+    };
+
+
+    // wait until DOM is ready
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+        // wait until window, stylesheets, images, links, and other media assets are loaded
+        window.onload = function() {
+
+            displays = {
+                pX: document.querySelector('.pageX'),
+                pY: document.querySelector('.pageY'),
+
+                cX: document.querySelector('.clientX'),
+                cY: document.querySelector('.clientY'),
+
+                oX: document.querySelector('.offsetX'),
+                oY: document.querySelector('.offsetY'),
+            }
+
+            // Center the pivot point of the follower
+            TweenMax.set('.follower', {
+                xPercent: -50,
+                yPercent: -50
+            })
+
+            // All ready, start!
+            init();
+
+         };
+
+    });
+
+
+  }
+
+  if($('#color-walk').length) {
+    init();
+  }
+
+})(jQuery);
+
 
 
