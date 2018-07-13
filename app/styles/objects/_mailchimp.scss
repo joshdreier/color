@@ -1,71 +1,99 @@
 #mc_embed_signup {
-  height: $stripe-height;
+  position: relative;
+  height: $stripe-height-mobile;
   font-family: 'Poppins', sans-serif;
 
-  form {
-    padding: 0 !important;
+  @include mq($bp-tablet) {
+    height: $stripe-height;
   }
 
-  #mc-embedded-subscribe-form {
+  form {
+    margin: 0;
+    padding: 0;
+  }
 
-    .mc-field-group {
-      width: auto !important;
-      min-height: 0 !important;
-      padding: 0 !important;
-      margin: 0 0 0 $gutter-desktop;
+  .mc-field-group {
+    margin: 0 0 0 $gutter-mobile;
 
-      label {
-        position: absolute;
-        margin: 0;
-        background: $chartreuse-yellow;
-        width: 300px;
-        height: 20px;
-        top: 18px;
-      }
+    @include mq($bp-tablet) {
+      margin-left: 0;
+    }
 
-      input[type=email] {
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
+  }
+
+  label {
+    position: absolute;
+    top: 15px;
+    left: $gutter-mobile;
+    margin: 0;
+    background: $chartreuse-yellow;
+    width: 160px;
+    height: 15px;
+    @include font(12, 12);
+    letter-spacing: 0.037em;
+
+    @include mq($bp-tablet) {
+      top: 18px;
+      left: $gutter-desktop;
+      height: 20px;
+      width: 300px;
+      margin-left: 0;
+      @include font(15, 15);
+    }
+
+  }//label
+
+  input[type=email] {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    @include font(12, 12);
+    letter-spacing: 0.037em;
+    width: 160px;
+    background: transparent;
+    border: 0;
+    border-bottom: solid 3px $black;
+    padding: 0;
+    text-indent: 0;
+    padding-top: 12px;
+
+    @include mq($bp-tablet) {
+      width: 300px;
+      margin-left: $gutter-desktop;
+      @include font(15, 15);
+      padding-top: 15px;
+      border-bottom: solid 5px $black;
+    }
+
+    @include placeholder {
+      @include font(12, 12);
+      color: $black;
+      letter-spacing: 0.037em;
+
+      @include mq($bp-tablet) {
         @include font(15, 15);
-        width: 300px;
-        background: transparent;
-        border: 0;
-        border-bottom: solid 5px $black;
-        padding: 0;
-        text-indent: 0;
-        padding-top: 18px;
-
-        &.mce_inline_error {
-          border: 0;
-          border-bottom: solid 5px $black;
-        }
-
-        &:focus {
-
-          ~ label {
-            display: none;
-          }
-        }
-
       }
 
-    }//.mc-field-group
+    }
 
-  }//#mc-embedded-subscribe-form
+  }
 
   input[type=submit] {
     @include remove-button-styles;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    @include font(20, 20);
+    @include font(16, 16);
     position: absolute;
-    left: 364px;
-    top: 20px;
+    left: 200px;
+    top: 14px;
+
+    @include mq($bp-tablet) {
+      left: 364px;
+      top: 20px;
+      @include font(20, 20);
+      letter-spacing: 0.12em;
+    }
 
     &:active {
       color: #737373;
@@ -77,26 +105,46 @@
 
   }
 
-  .mce_inline_error {
-    position: absolute;
-    left: 500px;
-    top: 18px;
+  div#mce-responses,
+  div.mce_inline_error {
+    @include font(12);
+    background-color: transparent !important;
+    color: $white !important;
   }
 
   div#mce-responses {
     position: absolute;
-    left: 500px;
-    top: 18px;
-    width: auto !important;
+    left: $gutter-mobile;
+    top: 90px;
+
+    @include mq($bp-tablet) {
+      left: $gutter-desktop;
+      top: 90px;
+    }
+
   }
 
-  div.response {
-    @include font(12);
-    margin-top: 2.4em !important;
+  div.mce_inline_error {
+    position: absolute;
+    top: 50px;
+    left: $gutter-mobile;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    @include mq($bp-tablet) {
+      left: $gutter-desktop;
+      top: 70px;
+    }
+
   }
 
   #mce-success-response {
-    color: $golden-bell;
+    color: $white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    @include font(15, 15);
   }
 
 }//#mc_embed_signup

@@ -167,6 +167,7 @@ CF.anchorScroll = (function ($) {
 
 })(jQuery);
 
+
 // FAQs
 CF.frequentlyAskedQuestions = (function ($) {
 
@@ -198,6 +199,38 @@ CF.frequentlyAskedQuestions = (function ($) {
   }
 
   if($('.faq-menu').length) {
+    init();
+  }
+
+})(jQuery);
+
+
+// Mailchimp newsletter signup
+CF.mailChimp = (function ($) {
+
+  function init(){
+
+    var $mcContainer = $('#mc_embed_signup');
+    var $mcLabel = $mcContainer.find('label');
+    var $mcInput = $('#mce-EMAIL');
+
+    $mcLabel.on('click', function(e) {
+      e.preventDefault();
+
+      if (!$(this).is('.active')) {
+        $(this).addClass('active').hide();
+        $mcInput.focus();
+      }
+      else {
+        $(this).removeClass('active');
+        $mcInput.blur();
+      }
+
+    });
+
+  }
+
+  if($('#mc_embed_signup').length) {
     init();
   }
 
