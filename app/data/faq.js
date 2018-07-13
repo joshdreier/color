@@ -57,18 +57,18 @@ var faq = [
   },
   {
     'q':'Are there any rules about taking photos?',
-    'a':'We want you to have fun and take in every moment. You are welcome to take photos, but please be considerate of others enjoying the exhibit. There are photo booths integrated throughout the exhibition, in hopes that it will free you to put your phone away, be in the photos with your friends and family, and appreciate the exhibits more fully. Tripods, accessive props, Commercial or Product shoots, press interviews, media shoots, all professional video equipment are prohibited without advance approval and accompaniment from a Color Factory representative. Contact press@colorfactory.co for requests.'
+    'a':'We want you to have fun and take in every moment. You are welcome to take photos, but please be considerate of others enjoying the exhibit. There are photo booths integrated throughout our space, in hopes that it will free you to put your phone away, be in photos with your friends and family, and appreciate the exhibits more fully. Tripods, excessive props, commercial or product shoots, media shoots, press interviews, and all professional video equipment are prohibited without advance approval and accompaniment from a Color Factory representative. Contact us at press@colorfactory.co for requests.'
   },
   {
     'q':'What does Color Factory do for the community?',
-    'a':'We are committed to collaborating and giving back to groups in the communities we create in. During our NYC run we\'ve collaborated and made donations to 826NYC, God\'s Love we Deliver, Coalition for the Homeless, Raices Texas, and LAND Gallery. A majority portion of all gift shop sales go to our partner nonprofits.'
+    'a':'We are committed to working with and giving back to nonprofit groups in the communities we create in. During our NYC run we\'ve collaborated with and made donations to 826NYC, God\'s Love We Deliver, Coalition for the Homeless, RAICES Texas, LAND Gallery and Housing Works. A significant portion of all sales in our Color Factory gift shop goes to our partner nonprofits.'
   },
   {
     'q':'Are there discounts for schools and students?',
-    'a':'We don\'t have student discounts but twice a month we bring in local schools from underserved neighborhoods. If you are a teacher or administrator at a Title 1 school, you can apply for a classroom visit, by emailing us at colorforthepeople@colorfactory.co  We will do our best to accommodate as space permits.'
+    'a':'We don\'t have student discounts, but twice a month we bring in local schools from underserved neighborhoods. If you are a teacher or administrator at a Title 1 school in NYC, you can apply for a classroom visit by contacting us at colorforthepeople@colorfactory.co. We will do our best to accommodate as space permits.'
   },
   {
     'q':'Can I book a group tour or an event?',
-    'a':'Yes! Please contact nycgroups@colorfactory.co for pricing.'
+    'a':'Yes! Please contact us at nycgroups@colorfactory.co for availability and pricing.'
   }
 ];

@@ -175,7 +175,7 @@ CF.frequentlyAskedQuestions = (function ($) {
     var $faqsContainer = $('.faq-menu');
 
     // load exernal data
-    $.getScript('scripts/faq.js', function() {
+    $.getScript('data/faq.js', function() {
       $.each( faq, function( i, val ) {
         // add content to DOM
         $faqsContainer.append('<li><h3><button aria-expanded="false">' + this.q + '</button></h3><p>' + this.a + '</p></li>');
@@ -291,7 +291,7 @@ CF.colorWalkHover = (function ($) {
 
 
     // wait until DOM is ready
-    document.addEventListener("DOMContentLoaded", function(event) {
+    document.addEventListener('DOMContentLoaded', function(event) {
 
       // wait until window, stylesheets, images, links, and other media assets are loaded
       window.onload = function() {
