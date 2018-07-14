@@ -100,6 +100,14 @@ gulp.task('data', () => {
   }).pipe(gulp.dest('dist/data'));
 });
 
+gulp.task('archive', () => {
+  return gulp.src([
+    'app/archive/**/*'
+  ], {
+    dot: true
+  }).pipe(gulp.dest('dist/archive'));
+});
+
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
@@ -173,7 +181,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'data', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'data', 'extras', 'archive'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
