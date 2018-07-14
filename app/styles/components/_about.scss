@@ -38,8 +38,8 @@
     }
 
     .sponsors {
-      height: 134px;
-      @include icon(134px, 134px, 'sponsors_button_outlined_off.svg','sponsors_button_outlined_on.svg');
+      height: 160px;
+      @include icon(160px, 160px, 'sponsors_starburst_off.svg','sponsors_starburst_on.svg');
     }
 
   }//.anchor-links
@@ -252,7 +252,7 @@
     background-color: $light-green;
 
     h2 {
-      @include icon(133px, 133px, 'sponsors_button_outlined_on.svg');
+      @include icon(160px, 160px, 'sponsors_starburst_on.svg');
     }
 
     .logos {
