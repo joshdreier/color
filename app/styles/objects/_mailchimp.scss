@@ -89,6 +89,7 @@
     position: absolute;
     left: 200px;
     top: 11px;
+    transition: color $fast-duration $base-timing;
 
     @include mq($bp-tablet) {
       left: 364px;
@@ -98,11 +99,11 @@
     }
 
     &:active {
-      color: #737373;
+      color: $empress;
     }
 
-    &:hover {
-      background: transparent;
+    @include hover {
+      color: $empress;
     }
 
   }
