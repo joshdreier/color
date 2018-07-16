@@ -59,10 +59,10 @@ CF.dotsAnimation = (function ($) {
 
   if($('.home').length) {
 
-    $('<img/>').attr('src', '../images/cityscape.jpg').on('load', function() {
+    $('<img/>').attr('src', '../images/CFintroAnimation_BackgroundPhoto.jpg').on('load', function() {
       $(this).remove(); // prevent memory leaks as @benweet suggested
       // add background image
-      $('body').css('background-image', 'url(/images/cityscape.jpg)');
+      $('body').css('background-image', 'url(/images/CFintroAnimation_BackgroundPhoto.jpg)');
       // start animation after image loads
       init();
    });
@@ -82,6 +82,10 @@ CF.sectionToggle = (function ($) {
     var $sectionToggle = $('.section-toggle');
     var slideSpeed = 400;
 
+    if ($('body').is('.about')) {
+      slideSpeed = 1200;
+    }
+
     // init by opening
     $sectionContainer.slideDown(slideSpeed).addClass('active');
     $sectionToggle.addClass('active').attr('aria-expanded', 'true');
@@ -97,7 +101,7 @@ CF.sectionToggle = (function ($) {
       }
       else {
         $(this).removeClass('active').attr('aria-expanded', 'false');
-        $(this).siblings('.section-container').slideUp(slideSpeed).removeClass('active');
+        $(this).siblings('.section-container').slideUp(400).removeClass('active');
         $(this).siblings('.section-title').removeClass('active').attr('aria-expanded', 'false');
       }
 
@@ -113,7 +117,7 @@ CF.sectionToggle = (function ($) {
       }
       else {
         $(this).removeClass('active').attr('aria-expanded', 'false');
-        $(this).siblings('.section-container').slideUp(slideSpeed).removeClass('active');
+        $(this).siblings('.section-container').slideUp(400).removeClass('active');
         $(this).siblings('.section-toggle').removeClass('active').attr('aria-expanded', 'false');
       }
 

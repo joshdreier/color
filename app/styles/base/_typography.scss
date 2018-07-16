@@ -4,11 +4,12 @@ body {
 }
 
 a {
-  color: $navy-blue;
+  color: $black;
   text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
+  @include hover {
+    color: $empress;
+    text-decoration: none;
   }
 }
 
@@ -101,7 +102,7 @@ h2 {
 }//h2
 
 h3 {
-  @include font(10, 16);
+  @include font(10, 12);
   font-weight: 900; //black
   margin: 12px 0;
   text-transform: uppercase;

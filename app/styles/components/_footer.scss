@@ -16,8 +16,6 @@
 
   a {
     display: inline-block;
-    color: $black;
-    text-decoration: none;
 
     &::before {
       content: '|';

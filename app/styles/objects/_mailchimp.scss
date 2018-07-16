@@ -85,7 +85,7 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    @include font(16, 16);
+    @include font(14, 14);
     position: absolute;
     left: 200px;
     top: 11px;
@@ -93,7 +93,7 @@
     @include mq($bp-tablet) {
       left: 364px;
       top: 20px;
-      @include font(20, 20);
+      @include font(17, 17);
       letter-spacing: 0.12em;
     }
 

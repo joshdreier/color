@@ -44,20 +44,7 @@
       padding-right: 0;
     }
 
-    a {
-      color: $black;
-    }
-
   }//p
-
-  .social {
-
-    @include hover {
-      color: $chartreuse-yellow;
-      text-decoration: none;
-    }
-
-  }//.social
 
 }//.visiting-container
 

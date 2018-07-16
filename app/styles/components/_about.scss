@@ -24,7 +24,7 @@
 
     .intro {
       height: 134px;
-      @include icon(134px, 134px, 'sowhatiscolorfactory_button_outlined_off.svg','sowhatiscolorfactory_button_outlined_on.svg');
+      @include icon(134px, 134px, 'whatiscolorfactory_button_off.svg','whatiscolorfactory_button_on.svg');
     }
 
     .artists {
@@ -95,7 +95,7 @@
     h2 {
       width: 110px;
       height: 110px;
-      @include icon(110px, 110px, 'sowhatiscolorfactory_button_outlined_on.svg');
+      @include icon(110px, 110px, 'whatiscolorfactory_button_on.svg');
 
       @include mq($bp-tablet) {
         @include visually-hidden;
@@ -104,7 +104,7 @@
     }
 
     p {
-      letter-spacing: .044em;
+      letter-spacing: .03em;
     }
 
     .visit-us {
@@ -132,6 +132,10 @@
 
     a {
       color: $golden-yellow;
+
+      @include hover {
+        text-decoration: underline;
+      }
     }
 
     h2 {
@@ -148,7 +152,7 @@
     }//h2
 
     p {
-      letter-spacing: .04em;
+      letter-spacing: .03em;
 
       @include mq($bp-tablet) {
         padding-left: cols(1);
@@ -172,11 +176,7 @@
     }//h3
 
     .button-container {
-      margin: 12px 0;
-
-      @include mq($bp-tablet) {
-        margin: 26px 0;
-      }
+      margin: 32px 0 24px;
 
       .button {
         display: block;
@@ -201,7 +201,7 @@
         }//&.moma
 
         &.cooper {
-          @include icon(133px, 42px, 'cooperhewitt.svg');
+          @include icon(184px, 58px, 'cooperhewitt.svg');
 
           @include mq($bp-tablet) {
             @include icon(290px, 92px, 'cooperhewitt.svg');
@@ -249,10 +249,21 @@
   }//#jobs
 
   #sponsors {
-    background-color: $light-green;
+    background-color: $pear;
+    padding-bottom: 48px;
+
+    @include mq($bp-tablet) {
+      padding-top: 34px;
+      padding-bottom: 24px;
+    }
 
     h2 {
-      @include icon(160px, 160px, 'sponsors_starburst_on.svg');
+      @include icon(133px, 133px, 'sponsors_starburst_on.svg');
+
+      @include mq($bp-tablet) {
+        @include icon(170px, 170px, 'sponsors_starburst_on.svg');
+      }
+
     }
 
     .logos {
@@ -261,10 +272,18 @@
       @include clearfix;
 
       @include mq($bp-tablet) {
-        flex-flow: row;
+        width: 82%;
+        margin-left: -5px;
+        padding-top: 5px;
+      }
+
+      @include mq($bp-desktop) {
+        width: 52%;
+        margin-left: -5px;
       }
 
       > li {
+        margin-bottom: 20px;
 
         @include mq($bp-tablet) {
           margin-right: 10px;
@@ -272,13 +291,17 @@
 
         @include mq($bp-desktop) {
           margin-right: 50px;
+          margin-bottom: 20px;
+
         }
 
         &:last-child {
 
           @include mq($bp-tablet) {
-            margin-right: 50px;
+            width: 70%;
           }
+
+
 
         }//&:last-child
 
@@ -294,8 +317,13 @@
         display: block;
 
         @include mq($bp-mobile) {
-          width: 50%;
+          width: 100%;
+          max-width: 227px;
           margin: 0 auto;
+        }
+
+        @include mq($bp-tablet) {
+          max-width: 280px;
         }
 
       }//a
@@ -315,9 +343,20 @@
 
     .title-container {
 
+      @include mq($bp-tablet) {
+       width: 170px;
+      }
+
       h2 {
         width: 133px;
         height: 133px;
+
+        @include mq($bp-tablet) {
+          width: 170px;
+          height: 170px;
+          margin-left: -20px;
+        }
+
       }//h2
 
     }//.title-container
@@ -336,12 +375,44 @@
       }
 
       p {
-        padding-right: 10%;
         @extend %small-p;
+
+        @include mq($bp-tablet) {
+          padding-right: 10%;
+        }
+
       }//p
 
     }//.text-container
 
   }//.jobs-container, sponsors-container
+
+  .artist-grid {
+    @include clearfix;
+    margin-bottom: 30px;
+
+    ul {
+
+      > li {
+        @include fixed-aspect(percentage(88/286), 'a');
+        float: left;
+        width: percentage(1/2);
+
+        @include mq($bp-desktop) {
+          width: percentage(1/3);
+        }
+
+        > a {
+          display: block;
+          @include hide-text;
+          @include background-cover;
+        }
+
+      }
+
+    }
+
+
+  }//.artist-grid
 
 }//.about-container
