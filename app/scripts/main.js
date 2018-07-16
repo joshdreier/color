@@ -46,8 +46,9 @@ CF.dotsAnimation = (function ($) {
 
 
     // delay other page elements fading in, header footer nav
-    /* @keyframes duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
-    $lateFade.css('animation', '820ms linear 7200ms 1 normal forwards running fade-in');
+    /* @keyframes name | duration | timing-function | delay | iteration-count | direction | fill-mode  */
+
+    $lateFade.css('animation', 'fade-in 820ms linear 7200ms 1 normal forwards');
 
     // add delay to fill in background in case user resizes window
     //setTimeout(function(){ $('body').addClass('delay') }, delay + 1000);
