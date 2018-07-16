@@ -85,6 +85,12 @@ CF.sectionToggle = (function ($) {
     if ($('body').is('.about')) {
       slideSpeed = 1200;
     }
+    else if ($('body').is('.faq')) {
+      slideSpeed = 600;
+    }
+    else if ($('body').is('.mcw')) {
+      slideSpeed = 900;
+    }
 
     // init by opening
     $sectionContainer.slideDown(slideSpeed).addClass('active');
