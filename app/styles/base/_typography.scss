@@ -51,6 +51,16 @@ h1 {
 
   }
 
+  &.visiting {
+    background-image: url(../images/visitingus.svg);
+
+    &:hover,
+    &.active {
+      background-image: url(../images/visitingus_over.svg);
+    }
+
+  }
+
   &.faq {
     background-image: url(../images/faq.svg);
 
@@ -61,12 +71,12 @@ h1 {
 
   }
 
-  &.visiting {
-    background-image: url(../images/visitingus.svg);
+  &.mcw {
+    background-image: url(../images/manhattancolorwalk.svg);
 
     &:hover,
     &.active {
-      background-image: url(../images/visitingus_over.svg);
+      background-image: url(../images/manhattancolorwalk_over.svg);
     }
 
   }
@@ -137,7 +147,7 @@ h3 {
 }//h3
 
 p {
-  @include font(14, 20);
+  @include font(13, 21);
   letter-spacing: .03em;
   margin: 20px 0;
 

@@ -1,0 +1,121 @@
+.mcw-container {
+  background: $white;
+  margin: 20px $gutter-mobile 40px;
+  padding: 24px $gutter-mobile $gutter-mobile;
+  text-align: center;
+
+  @include mq($bp-tablet) {
+    margin: 50px cols(7) 70px cols(7) ;
+    padding: 30px 50px 50px;
+  }
+
+  @include mq($bp-desktop) {
+    margin-right: cols(9);
+    margin-bottom: 90px;
+    margin-top: 60px;
+    padding: 56px cols(5) 70px;
+  }
+
+  .title {
+    width: 126px;
+    height: 126px;
+    margin: 0 auto 14px;
+    @include icon(126px, 126px, 'ManhattanColorWalk_Diamond.svg');
+
+    @include mq($bp-tablet) {
+      width: 158px;
+      height: 158px;
+      margin-bottom: 30px;
+      @include icon(158px, 158px, 'ManhattanColorWalk_Diamond.svg');
+    }
+
+  }//.title
+
+  p {
+    letter-spacing: .008em;
+    margin: 16px 0;
+
+    @include mq($bp-tablet) {
+      margin: 25px 0;
+    }
+
+    &.callout {
+      font-weight: 900;
+      text-transform: uppercase;
+      @include font(9, 13);
+      letter-spacing: 0.12em;
+
+      @include mq($bp-mobile) {
+        max-width: 270px;
+        margin: 24px auto;
+      }
+
+      @include mq($bp-tablet) {
+        max-width: 370px;
+        margin: 40px auto;
+        @include font(13, 20);
+        letter-spacing: 0.12em;
+      }
+
+      @include mq($bp-desktop) {
+        max-width: 100%;
+      }
+
+    }
+
+  }
+
+  .gallery {
+
+    @include mq($bp-tablet) {
+      display: flex;
+    }
+
+    li {
+      margin-bottom: 20px;
+
+      @include mq($bp-tablet) {
+        width: 50%;
+      }
+
+    }
+
+    figure {
+      padding: 0;
+      margin: 0;
+
+      @include mq($bp-mobile) {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+    }
+
+    figcaption {
+      @include font(12, 15);
+
+      @include mq($bp-tablet) {
+        text-align: left;
+        @include font(15, 18);
+      }
+
+    }//figcaption
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 12px;
+
+      @include mq($bp-tablet) {
+        margin-bottom: 18px;
+      }
+
+    }
+
+  }//.gallery
+
+  .video-container {
+    padding-top: 7px;
+  }
+
+}//.mcw-container
