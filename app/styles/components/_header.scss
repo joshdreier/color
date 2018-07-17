@@ -20,7 +20,6 @@
     background-image: url('../images/logo.svg');
     @include background-cover;
     @include hide-text;
-    @include transition;
 
     @include mq($bp-mobile) {
       width: 84px;
