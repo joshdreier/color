@@ -22,6 +22,7 @@
     h3 {
       margin: 0;
       padding-left: 26px;
+      text-transform: none;
 
       button {
         @include remove-button-styles;
