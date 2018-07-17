@@ -274,11 +274,11 @@
       @include mq($bp-tablet) {
         width: 82%;
         margin-left: -5px;
-        padding-top: 5px;
+        padding-top: 10px;
       }
 
       @include mq($bp-desktop) {
-        width: 52%;
+        width: 100%;
         margin-left: -5px;
       }
 
@@ -318,12 +318,19 @@
 
         @include mq($bp-mobile) {
           width: 100%;
-          max-width: 227px;
           margin: 0 auto;
         }
 
-        @include mq($bp-tablet) {
-          max-width: 280px;
+        &.maybelline {
+          max-width: 300px;
+        }
+
+        &.gymboree {
+          max-width: 214px;
+        }
+
+        &.anagram {
+          max-width: 100px;
         }
 
       }//a

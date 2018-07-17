@@ -96,6 +96,7 @@
 
       @include mq($bp-tablet) {
         text-align: left;
+        padding-right: 5%;
         @include font(15, 18);
       }
 
