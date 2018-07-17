@@ -70,7 +70,7 @@
         border-bottom: solid 5px $black;
       }
 
-      &::before {
+      &::after {
         content: '';
         display: block;
         position: absolute;
@@ -87,103 +87,103 @@
       }
 
       &:nth-child(17n +1) {
-        &::before {
+        &::after {
           background-color: $golden-bell;
         }
       }
 
       &:nth-child(17n + 2) {
-        &::before {
+        &::after {
           background-color: $pumpkin;
         }
       }
 
       &:nth-child(17n + 3) {
-        &::before {
+        &::after {
           background-color: $chartreuse-yellow;
         }
       }
 
       &:nth-child(17n + 4) {
-        &::before {
+        &::after {
           background-color: $deep-sky-blue;
         }
       }
 
       &:nth-child(17n + 5) {
-        &::before {
+        &::after {
           background-color: $arsenic;
         }
       }
 
       &:nth-child(17n + 6) {
-        &::before {
+        &::after {
           background-color: $eden;
         }
       }
 
       &:nth-child(17n + 7) {
-        &::before {
+        &::after {
           background-color: $downy;
         }
       }
 
       &:nth-child(17n + 8) {
-        &::before {
+        &::after {
           background-color: $can-can;
         }
       }
 
       &:nth-child(17n + 9) {
-        &::before {
+        &::after {
           background-color: $cinnabar;
         }
       }
 
       &:nth-child(17n + 10) {
-        &::before {
+        &::after {
           background-color: $rosebud;
         }
       }
 
       &:nth-child(17n + 11) {
-        &::before {
+        &::after {
           background-color: $flame-pea;
         }
       }
 
       &:nth-child(17n + 12) {
-        &::before {
+        &::after {
           background-color: $dawn;
         }
       }
 
       &:nth-child(17n + 13) {
-        &::before {
+        &::after {
           background-color: $wasabi;
         }
       }
 
       &:nth-child(17n + 14) {
-        &::before {
+        &::after {
           background-color: $hot-magenta;
         }
       }
 
       &:nth-child(17n + 15) {
-        &::before {
+        &::after {
           background-color: $mulberry;
         }
       }
 
       &:nth-child(17n + 16) {
-        &::before {
+        &::after {
           background-color: $golden-yellow;
         }
       }
 
       &:nth-child(17n + 17) {
-        &::before {
+        &::after {
           background-color: $dark-pastel-green;
         }
       }

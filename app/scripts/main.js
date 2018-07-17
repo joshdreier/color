@@ -50,11 +50,11 @@ CF.dotsAnimation = (function ($) {
 
     $lateFade.css('animation', 'fade-in 820ms linear 7200ms 1 normal forwards');
 
-    // add delay to fill in background in case user resizes window
-    setTimeout(function(){ $('body.home').addClass('delay') }, delay + 1300);
-
     // load colorwalk
     setTimeout(function(){ $colorWalk.show(); }, delay + 1000);
+
+    // add delay to fill in background in case user resizes window
+    setTimeout(function(){ $('body.home').addClass('delay') }, delay + 2000);
 
   }
 
