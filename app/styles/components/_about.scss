@@ -24,7 +24,7 @@
 
     .intro {
       height: 134px;
-      @include icon(134px, 134px, 'whatiscolorfactory_button_off.svg','whatiscolorfactory_button_on.svg');
+      @include icon(134px, 134px, 'whatiscolorfactory_button_off.png','whatiscolorfactory_button_on.png');
     }
 
     .artists {
@@ -39,7 +39,7 @@
 
     .sponsors {
       height: 160px;
-      @include icon(160px, 160px, 'sponsors_starburst_off.svg','sponsors_starburst_on.svg');
+      @include icon(160px, 160px, 'sponsors_starburst_off.png','sponsors_starburst_on.png');
     }
 
   }//.anchor-links
@@ -95,7 +95,7 @@
     h2 {
       width: 110px;
       height: 110px;
-      @include icon(110px, 110px, 'whatiscolorfactory_button_on.svg');
+      @include icon(110px, 110px, 'whatiscolorfactory_button_on.png');
 
       @include mq($bp-tablet) {
         @include visually-hidden;
@@ -258,10 +258,10 @@
     }
 
     h2 {
-      @include icon(133px, 133px, 'sponsors_starburst_on.svg');
+      @include icon(133px, 133px, 'sponsors_starburst_on.png');
 
       @include mq($bp-tablet) {
-        @include icon(170px, 170px, 'sponsors_starburst_on.svg');
+        @include icon(170px, 170px, 'sponsors_starburst_on.png');
       }
 
     }
