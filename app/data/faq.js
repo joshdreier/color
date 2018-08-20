@@ -32,7 +32,7 @@ var faq = [
     'a':'Yes! And, you can take your time going through each room. However, we ask that you don\'t revisit any areas you\'ve already passed through. (One-way only!)'
   },
   {
-    'q':'Is Color Factory handicap accessible?',
+    'q':'Is Color Factory ADA friendly?',
     'a':'Yes, we are ADA friendly and compliant.'
   },
   {
